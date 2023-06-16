@@ -4,58 +4,12 @@
   import "$lib/css/main.css";
 </script>
 
-<svelte:head>
-  <link
-    rel="preload"
-    href="/fonts/HurmitNerdFontMono-Regular.otf"
-    as="font"
-    type="font/otf"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    href="/fonts/HurmitNerdFontMono-Bold.otf"
-    as="font"
-    type="font/otf"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    href="/fonts/HurmitNerdFontMono-BoldItalic.otf"
-    as="font"
-    type="font/otf"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    href="/fonts/HurmitNerdFontMono-LightItalic.otf"
-    as="font"
-    type="font/otf"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    href="/fonts/HurmitNerdFontMono-Light.otf"
-    as="font"
-    type="font/otf"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    href="/fonts/HurmitNerdFontMono-Regular.otf"
-    as="font"
-    type="font/otf"
-    crossorigin
-  />
-  <link rel="preload" href="/images/background.png" as="image" crossorigin />
-</svelte:head>
-
 <div class="body">
   <Navbar />
   <div class="background">
     <div class="opacity" />
   </div>
-  <main class="main">
+  <main>
     <slot />
   </main>
   <Footer />
@@ -68,6 +22,11 @@
     height: 100%;
     background-color: var(--color-dark-background);
     opacity: 85%;
+    z-index: 2;
+  }
+
+  :global(body.light-mode) .opacity {
+    background-color: var(--color-light-background);
   }
 
   .background {
@@ -80,9 +39,10 @@
     left: 0px;
     right: 0px;
     bottom: 62px;
+    z-index: 1;
   }
 
-  .main {
+  main {
     position: fixed;
     top: 62px;
     left: 0px;
@@ -91,8 +51,7 @@
     padding: 0px;
     margin: 0px;
     overflow: hidden;
-    /* background-color: var(--color-dark-background); */
-    color: var(--color-dark-foreground);
+    z-index: 3;
   }
 
   .body {
@@ -102,22 +61,7 @@
     left: 0px;
     right: 0px;
     bottom: 0px;
-    background-color: var(--color-dark-background);
-    color: var(--color-dark-foreground);
-    font-family: HurmitNerdFontMono-Regular;
-  }
-
-  :global(body.light-mode) .body {
-    background-color: var(--color-light-background);
-    color: var(--color-light-foreground);
-  }
-
-  :global(body.light-mode) .opacity {
-    background-color: var(--color-light-background);
-  }
-
-  :global(body.light-mode) .main {
-    /* background-color: var(--color-light-background); */
-    color: var(--color-light-foreground);
+    margin: 0px;
+    padding: 0px;
   }
 </style>

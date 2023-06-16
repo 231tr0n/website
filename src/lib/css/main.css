@@ -1,16 +1,11 @@
 :root {
   --color-dark-background: #1a1a1a;
   --color-dark-foreground: #cccccc;
-  /* --color-dark-component: #2e2e2e; */
   --color-dark-component: #3a3c3b;
   --color-light-background: #ffffff;
   --color-light-foreground: #454545;
   --color-light-component: #c1c1c1;
-}
-
-body {
-  padding: 0px;
-  margin: 0px;
+  --color-anchor: darkcyan;
 }
 
 @font-face {
@@ -41,4 +36,40 @@ body {
 @font-face {
   font-family: HurmitNerdFontMono-Regular;
   src: url("/fonts/HurmitNerdFontMono-Regular.otf") format("opentype");
+}
+
+a {
+  color: var(--color-anchor);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a img {
+  border: 2px solid transparent;
+}
+
+a img:hover {
+  border: 2px solid var(--color-anchor);
+}
+
+body {
+  background-color: var(--color-dark-background);
+  color: var(--color-dark-foreground);
+  font-family: HurmitNerdFontMono-Regular;
+}
+
+body.light-mode {
+  background-color: var(--color-light-background);
+  color: var(--color-light-foreground);
+}
+
+button {
+  border: 2px solid transparent;
+}
+
+button:hover {
+  border: 2px solid var(--color-anchor);
 }

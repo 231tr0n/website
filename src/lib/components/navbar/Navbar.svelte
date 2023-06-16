@@ -2,24 +2,13 @@
   import Theme from "$lib/components/navbar/Theme.svelte";
   import Logo from "$lib/components/navbar/Logo.svelte";
   import Heading from "$lib/components/navbar/Heading.svelte";
-  import { fly } from "svelte/transition";
-  let start = false;
-  let screenheight = 0;
-  let duration = 500;
-  setTimeout(function () {
-    start = true;
-  }, 0);
 </script>
 
-<svelte:window bind:innerHeight={screenheight} />
-
-{#if start}
-  <header transition:fly={{ duration: duration, y: screenheight }}>
-    <Logo />
-    <Heading />
-    <Theme />
-  </header>
-{/if}
+<header>
+  <Logo />
+  <Heading />
+  <Theme />
+</header>
 
 <style>
   header {
@@ -33,7 +22,7 @@
     display: flex;
     justify-content: space-between;
     align-content: center;
-    vertical-align: baseline;
+    vertical-align: middle;
     z-index: 100;
     border-bottom: 1px solid var(--color-dark-foreground);
     background-color: var(--color-dark-background);
