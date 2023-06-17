@@ -21,7 +21,7 @@
     width: 100%;
     height: 100%;
     background-color: var(--color-dark-background);
-    opacity: 85%;
+    opacity: 90%;
     z-index: 2;
   }
 
@@ -33,7 +33,7 @@
     background-image: url("/images/background.png");
     background-position: center;
     background-repeat: no-repeat;
-    filter: blur(3px);
+    filter: blur(5px);
     position: fixed;
     top: 62px;
     left: 0px;

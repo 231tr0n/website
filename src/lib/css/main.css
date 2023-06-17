@@ -2,10 +2,28 @@
   --color-dark-background: #1a1a1a;
   --color-dark-foreground: #cccccc;
   --color-dark-component: #3a3c3b;
-  --color-light-background: #ffffff;
+  --color-dark-heading: darkorange;
+  --color-dark-keyword: #8b8b00;
+  --color-dark-anchor: darkcyan;
+  --color-light-background: #f7fafd;
   --color-light-foreground: #454545;
   --color-light-component: #c1c1c1;
-  --color-anchor: darkcyan;
+  --color-light-heading: darkred;
+  --color-light-keyword: darkmagenta;
+  --color-light-anchor: darkcyan;
+
+  --color-red: red;
+  --color-blue: darkblue;
+  --color-green: darkgreen;
+  --color-yellow: #8b8b00;
+  --color-pink: darkmagenta;
+  --color-orange: darkorange;
+  --color-brown: darkred;
+  --color-cyan: darkcyan;
+  --color-white: #cccccc;
+  --color-black: #454545;
+  --color-darkgrey: #3a3c3b;
+  --color-lightgrey: #c1c1c1;
 }
 
 @font-face {
@@ -39,7 +57,7 @@
 }
 
 a {
-  color: var(--color-anchor);
+  color: var(--color-dark-anchor);
   text-decoration: none;
 }
 
@@ -52,7 +70,15 @@ a img {
 }
 
 a img:hover {
-  border: 2px solid var(--color-anchor);
+  border: 2px solid var(--color-dark-anchor);
+}
+
+body.light-mode a {
+  color: var(--color-light-anchor);
+}
+
+body.light-mode a img:hover {
+  border: 2px solid var(--color-light-anchor);
 }
 
 body {
@@ -71,5 +97,13 @@ button {
 }
 
 button:hover {
-  border: 2px solid var(--color-anchor);
+  border: 2px solid var(--color-dark-anchor);
+}
+
+body.light-mode button:hover {
+  border: 2px solid var(--color-light-anchor);
+}
+
+img {
+  vertical-align: middle;
 }

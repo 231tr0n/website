@@ -6,6 +6,10 @@
     font-weight: bold;
     text-decoration: underline;
     font-size: 40px;
-    color: green;
+    color: var(--color-dark-heading);
+  }
+
+  :global(body.light-mode) div {
+    color: var(--color-light-heading);
   }
 </style>

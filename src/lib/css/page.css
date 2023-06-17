@@ -9,63 +9,108 @@
   overflow-x: hidden;
 }
 
-.section {
+.content {
   max-width: 90%;
   height: max-content;
+  text-align: justify;
+  vertical-align: middle;
 }
 
-.heading {
-  width: 100%;
+.center {
   text-align: center;
 }
 
-.centeredtext {
-  width: 100%;
-  text-align: center;
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.img-top {
+  vertical-align: top;
+}
+
+.img-bottom {
+  vertical-align: bottom;
+}
+
+img {
+  vertical-align: middle;
 }
 
 li {
   padding-right: 10px;
 }
 
-.content {
-  display: block;
-  margin-bottom: 1em;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 1em;
-  text-align: justify;
-  box-sizing: border-box;
-  border-radius: 5px;
-  padding: 5px;
-  font-size: 15px;
-  background-color: var(--color-dark-component);
-  color: var(--color-dark-foreground);
-}
-
-body.light-mode .content {
-  background-color: var(--color-light-component);
-  color: var(--color-light-foreground);
-}
-
 hr {
-  width: 90%;
+  width: 100%;
 }
 
 .highlightkeyword {
-  color: violet;
+  color: var(--color-dark-keyword);
   font-weight: bold;
 }
 
 body.light-mode .highlightkeyword {
-  color: darkmagenta;
+  color: var(--color-light-keyword);
 }
 
-.heading {
-  color: orange;
+h1 {
+  border-radius: 5px;
+  top: 0px;
+  position: sticky;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  background-color: var(--color-dark-component);
+  color: var(--color-dark-heading);
+}
+
+body.light-mode h1 {
+  background-color: var(--color-light-component);
+  color: var(--color-light-heading);
+}
+
+
+h2 {
+  border-radius: 5px;
+  top: 40px;
+  position: sticky;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  background-color: var(--color-dark-component);
+}
+
+h2:last-child {
+  height: 100%;
+}
+
+body.light-mode h2 {
+  background-color: var(--color-light-component);
+}
+
+h3 {
+  text-align: center;
+  color: var(--color-dark-keyword);
   font-weight: bold;
 }
 
-body.light-mode .heading {
-  color: brown;
+body.light-mode h3 {
+  color: var(--color-light-keyword);
+}
+
+h4 {
+  font-weight: bold;
+  text-align: center;
+}
+
+body.light-mode h4 {
+  color: black;
+}
+
+.last {
+  height: calc(100vh - 62px - 62px);
 }
