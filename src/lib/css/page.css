@@ -7,13 +7,19 @@
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
 }
 
 .content {
+  padding: 0px;
+  margin: 0px;
   max-width: 90%;
   height: max-content;
   text-align: justify;
   vertical-align: middle;
+  padding-bottom: calc(100vh - 45px - 45px - 95px);
 }
 
 .center {
@@ -28,24 +34,8 @@
   text-align: right;
 }
 
-.img-top {
-  vertical-align: top;
-}
-
-.img-bottom {
-  vertical-align: bottom;
-}
-
 img {
   vertical-align: middle;
-}
-
-li {
-  padding-right: 10px;
-}
-
-hr {
-  width: 100%;
 }
 
 .highlightkeyword {
@@ -62,7 +52,8 @@ h1 {
   top: 0px;
   position: sticky;
   font-weight: bold;
-  width: 100%;
+  height: 45px;
+  box-sizing: border-box;
   text-align: center;
   background-color: var(--color-dark-component);
   color: var(--color-dark-heading);
@@ -77,15 +68,12 @@ body.light-mode h1 {
 h2 {
   border-radius: 5px;
   top: 40px;
+  height: 35px;
+  box-sizing: border-box;
   position: sticky;
   font-weight: bold;
-  width: 100%;
   text-align: center;
   background-color: var(--color-dark-component);
-}
-
-h2:last-child {
-  height: 100%;
 }
 
 body.light-mode h2 {
@@ -100,17 +88,4 @@ h3 {
 
 body.light-mode h3 {
   color: var(--color-light-keyword);
-}
-
-h4 {
-  font-weight: bold;
-  text-align: center;
-}
-
-body.light-mode h4 {
-  color: black;
-}
-
-.last {
-  height: calc(100vh - 62px - 62px);
 }

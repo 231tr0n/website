@@ -33,7 +33,7 @@
     bottom: 0px;
     left: 0px;
     right: 0px;
-    height: 62px;
+    height: 45px;
     padding: 5px;
     box-sizing: border-box;
     z-index: 100;
@@ -47,7 +47,9 @@
   }
 
   img {
-    padding: 5px;
+    padding: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
     width: 30px;
     height: 30px;
   }

@@ -16,13 +16,12 @@
     top: 0px;
     left: 0px;
     right: 0px;
-    height: 62px;
-    padding: 5px;
-    box-sizing: border-box;
+    height: 45px;
     display: flex;
+    padding-left: 5px;
+    padding-right: 5px;
+    box-sizing: border-box;
     justify-content: space-between;
-    align-content: center;
-    vertical-align: middle;
     z-index: 100;
     border-bottom: 1px solid var(--color-dark-foreground);
     background-color: var(--color-dark-background);

@@ -4,7 +4,7 @@
 
 <div class="page">
   <div class="content">
-    <h1>Portfolio</h1>
+    <h1>Profile</h1>
 
     <h2>About</h2>
     <ul>
@@ -232,19 +232,18 @@
         <img class="logo" alt="Fish" src="/images/fish.png" />
       </a>
     </div>
-    <div class="last" />
   </div>
 </div>
 
 <style>
   .logo {
-    padding: 4px;
+    padding: 2px;
     height: 40px;
     width: auto;
   }
 
   .big-logo {
-    padding: 4px;
+    padding: 2px;
     height: 100px;
     width: auto;
   }

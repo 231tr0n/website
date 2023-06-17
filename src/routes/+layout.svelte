@@ -35,19 +35,19 @@
     background-repeat: no-repeat;
     filter: blur(5px);
     position: fixed;
-    top: 62px;
+    top: 45px;
     left: 0px;
     right: 0px;
-    bottom: 62px;
+    bottom: 45px;
     z-index: 1;
   }
 
   main {
     position: fixed;
-    top: 62px;
+    top: 45px;
     left: 0px;
     right: 0px;
-    bottom: 62px;
+    bottom: 45px;
     padding: 0px;
     margin: 0px;
     overflow: hidden;
