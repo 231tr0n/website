@@ -1,9 +1,11 @@
 <script>
   import "$lib/css/page.css";
+  import Breadcrumb from "$lib/components/page/Breadcrumb.svelte";
 </script>
 
 <div class="page">
   <div class="content">
+    <Breadcrumb />
     <h1>Profile</h1>
 
     <h2>About</h2>

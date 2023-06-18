@@ -36,6 +36,10 @@
     border-radius: 50%;
   }
 
+  img {
+    height: 20px;
+  }
+
   :global(body.light-mode) button {
     background-color: var(--color-light-component);
   }
