@@ -1,16 +1,24 @@
 <script>
   import Theme from "$lib/components/navbar/Theme.svelte";
   import Logo from "$lib/components/navbar/Logo.svelte";
-  import Heading from "$lib/components/navbar/Heading.svelte";
+  import Navlinks from "$lib/components/navbar/Navlinks.svelte";
 </script>
 
 <header>
   <Logo />
-  <Heading />
-  <Theme />
+  <div>
+    <Navlinks />
+    <Theme />
+  </div>
 </header>
 
 <style>
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   header {
     position: fixed;
     top: 0px;
@@ -18,7 +26,7 @@
     right: 0px;
     height: 45px;
     display: flex;
-    padding-left: 5px;
+    padding-left: 3px;
     padding-right: 5px;
     box-sizing: border-box;
     justify-content: space-between;

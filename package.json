@@ -11,6 +11,7 @@
   "devDependencies": {
     "@sveltejs/adapter-static": "^2.0.2",
     "@sveltejs/kit": "^1.20.4",
+    "@types/highlightjs": "^9.12.2",
     "eslint": "^8.43.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.27.5",
@@ -19,5 +20,8 @@
     "svelte": "^3.59.1",
     "vite": "^4.3.9"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "highlight.js": "^11.8.0"
+  }
 }

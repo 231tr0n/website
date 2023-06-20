@@ -22,17 +22,18 @@
   }
 </script>
 
-<div>
-  <button on:click={toggletheme}>
-    <img alt={src == dark ? "Dark Theme" : "Light Theme"} {src} />
-  </button>
-</div>
+<button on:click={toggletheme}>
+  <img alt={src == dark ? "Dark Theme" : "Light Theme"} {src} />
+</button>
 
 <style>
   button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--color-dark-component);
-    height: 35px;
-    width: 35px;
+    height: 30px;
+    width: 30px;
     border-radius: 50%;
   }
 
@@ -42,11 +43,5 @@
 
   :global(body.light-mode) button {
     background-color: var(--color-light-component);
-  }
-
-  div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 </style>
