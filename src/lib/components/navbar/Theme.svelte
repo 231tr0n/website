@@ -32,13 +32,14 @@
     justify-content: center;
     align-items: center;
     background-color: var(--color-dark-component);
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
     border-radius: 50%;
   }
 
   img {
     height: 20px;
+    width: 20px;
   }
 
   :global(body.light-mode) button {

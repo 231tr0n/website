@@ -2,13 +2,11 @@
 
 <style>
   div {
-    padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: HurmitNerdFontMono-Bold;
     font-weight: bold;
-    text-decoration: underline;
     color: var(--color-dark-heading);
   }
 

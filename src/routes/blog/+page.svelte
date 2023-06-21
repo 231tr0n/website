@@ -1,6 +1,6 @@
 <script>
   import Page from "$lib/components/page/Page.svelte";
-  import Profile from "$lib/components/blog/Profile.svelte";
+  import Blog from "./Blog.svelte";
 </script>
 
-<Page blog={Profile} />
+<Page blog={Blog} />

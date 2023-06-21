@@ -4,7 +4,7 @@
   --color-dark-component: #3a3c3b;
   --color-dark-heading: darkorange;
   --color-dark-keyword: #8b8b00;
-  --color-dark-anchor: darkcyan;
+  --color-dark-anchor: darkturquoise;
   --color-light-background: #f7fafd;
   --color-light-foreground: #454545;
   --color-light-component: #c1c1c1;
@@ -61,6 +61,10 @@ a {
   text-decoration: none;
 }
 
+body.light-mode a {
+  color: var(--color-light-anchor);
+}
+
 a:hover {
   text-decoration: underline;
 }
@@ -71,10 +75,6 @@ a img {
 
 a img:hover {
   border: 2px solid var(--color-dark-anchor);
-}
-
-body.light-mode a {
-  color: var(--color-light-anchor);
 }
 
 body.light-mode a img:hover {

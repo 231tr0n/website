@@ -17,8 +17,8 @@
   }
 </script>
 
-<div class="code-block">
-  {#if code && langDef && langName}
+{#if code && langDef && langName}
+  <div class="code-block">
     <div class="code-context">
       <span>{fileName}</span><span>{langName}</span>
     </div>
@@ -30,10 +30,8 @@
       <hr />
       <pre>{output}</pre>
     {/if}
-  {:else}
-    This component requires attributes "code", "langDef", "langName".
-  {/if}
-</div>
+  </div>
+{/if}
 
 <style>
   pre {

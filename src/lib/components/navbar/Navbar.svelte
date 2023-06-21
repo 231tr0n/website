@@ -1,18 +1,26 @@
 <script>
-  import Theme from "$lib/components/navbar/Theme.svelte";
-  import Logo from "$lib/components/navbar/Logo.svelte";
-  import Navlinks from "$lib/components/navbar/Navlinks.svelte";
+  import Theme from "./Theme.svelte";
+  import Logo from "./Logo.svelte";
+  import Navlinks from "./Navlinks.svelte";
 </script>
 
 <header>
-  <Logo />
   <div>
-    <Navlinks />
+    <Logo />
+    <div class="padder">
+      <Navlinks />
+    </div>
+  </div>
+  <div>
     <Theme />
   </div>
 </header>
 
 <style>
+  .padder {
+    padding: 3px;
+  }
+
   div {
     display: flex;
     justify-content: center;
@@ -26,7 +34,7 @@
     right: 0px;
     height: 45px;
     display: flex;
-    padding-left: 3px;
+    padding-left: 5px;
     padding-right: 5px;
     box-sizing: border-box;
     justify-content: space-between;

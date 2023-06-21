@@ -19,7 +19,7 @@
   height: max-content;
   text-align: justify;
   vertical-align: middle;
-  padding-bottom: calc(100vh - 45px - 45px - 60px);
+  padding-bottom: calc(100vh - 45px - 45px - 55px);
 }
 
 .center {
@@ -34,10 +34,6 @@
   text-align: right;
 }
 
-img {
-  vertical-align: middle;
-}
-
 .highlightkeyword {
   color: var(--color-dark-keyword);
   font-weight: bold;
@@ -49,8 +45,9 @@ body.light-mode .highlightkeyword {
 
 h1 {
   border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
   font-weight: bold;
-  padding: 5px;
   text-align: center;
   background-color: var(--color-dark-component);
   color: var(--color-dark-heading);
@@ -63,8 +60,8 @@ body.light-mode h1 {
 
 h2 {
   border-radius: 5px;
-  padding: 5px;
-  box-sizing: border-box;
+  padding-left: 5px;
+  padding-right: 5px;
   font-weight: bold;
   text-align: center;
   background-color: var(--color-dark-component);
@@ -97,13 +94,21 @@ select {
   color: var(--color-dark-keyword);
 }
 
-select:focus {
-  outline:none;
-}
-
 body.light-mode select {
   border: 2px solid var(--color-light-keyword);
   color: var(--color-light-keyword);
+}
+
+select:hover {
+  border: 2px solid var(--color-dark-anchor);
+}
+
+body.light-mode select:hover {
+  border: 2px solid var(--color-light-anchor);
+}
+
+select:focus {
+  outline: none;
 }
 
 option {
@@ -130,8 +135,16 @@ body.light-mode input {
   color: var(--color-light-keyword);
 }
 
+input:hover {
+  border: 2px solid var(--color-dark-anchor);
+}
+
+body.light-mode input:hover {
+  border: 2px solid var(--color-light-anchor);
+}
+
 input:focus {
-  outline:none;
+  outline: none;
 }
 
 button {
@@ -145,6 +158,32 @@ button {
 body.light-mode button {
   background-color: var(--color-light-component);
   color: var(--color-light-keyword);
+}
+
+.button {
+  margin: 1em;
+  display: inline-block;
+  padding: 5px;
+  font-family: HurmitNerdFontMono-Regular;
+  border-radius: 5px;
+  background-color: var(--color-dark-component);
+  color: var(--color-dark-keyword);
+  border: 2px solid transparent;
+}
+
+body.light-mode .button {
+  background-color: var(--color-light-component);
+  color: var(--color-light-keyword);
+}
+
+a.button:hover {
+  text-decoration: none;
+  border: 2px solid var(--color-dark-anchor);
+}
+
+body.light-mode a.button:hover {
+  text-decoration: none;
+  border: 2px solid var(--color-light-anchor);
 }
 
 table {
@@ -182,3 +221,20 @@ pre {
 code {
   font-family: HurmitNerdFontMono-Regular;
 }
+
+.badge {
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: 3px;
+  margin-right: 3px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 2px solid var(--color-dark-keyword);
+  color: var(--color-dark-keyword);
+}
+
+body.light-mode .badge {
+  border: 2px solid var(--color-light-keyword);
+  color: var(--color-light-keyword);
+} 

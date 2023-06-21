@@ -1,6 +1,6 @@
 <script>
   import Page from "$lib/components/page/Page.svelte";
-  import Home from "./Home.svelte";
+  import Tictactoe from "./Tictactoe.svelte";
 </script>
 
-<Page blog={Home} />
+<Page blog={Tictactoe} />
