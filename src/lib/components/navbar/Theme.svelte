@@ -34,6 +34,8 @@
     background-color: var(--color-dark-component);
     height: 35px;
     width: 35px;
+    padding: 0px;
+    margin: 0px;
     border-radius: 50%;
   }
 

@@ -1,5 +1,5 @@
 <script>
-  import { onMount } from "svelte";
+  import { onMount, afterUpdate } from "svelte";
   import "$lib/css/page.css";
 
   export let blog;
@@ -31,6 +31,10 @@
       prev = section;
     }
   }
+
+  afterUpdate(() => {
+    sections = document.querySelectorAll("div.page div.content h2");
+  });
 
   onMount(() => {
     name = document.querySelector("div.page div.content h1");

@@ -2,9 +2,9 @@
   import highlightjs from "highlight.js/lib/core";
   import "highlight.js/styles/base16/solarized-dark.css";
 
-  export let code = null;
-  export let langDef = null;
-  export let langName = null;
+  export let code = "";
+  export let langDef = "";
+  export let langName = "";
   export let fileName = "";
   export let output = "";
   let codeHTML = "";
@@ -37,7 +37,7 @@
   pre {
     margin: 0px;
     font-size: 13px;
-    padding: 10px;
+    padding: 5px;
     overflow-x: auto;
   }
 
