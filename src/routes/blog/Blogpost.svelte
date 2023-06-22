@@ -5,9 +5,9 @@
   export let url = "";
   let visible = false;
 
-  function toggle() {
+  let toggle = () => {
     visible = !visible;
-  }
+  };
 </script>
 
 {#if post && badges && description}
@@ -16,28 +16,37 @@
       {post}
     </h2>
     <div class="padder" />
-    <a href={url}><button>Open</button></a>
     <button on:click={toggle}
       ><span class="accordion-button"
         >{#if visible}▲{:else}▼{/if}</span
       ></button
     >
+    <a href={url}><button>Open</button></a>
   </div>
-  {#if visible}
-    <div class="center">
-      {#each badges as badge}
-        <span class="badge">{badge}</span>
-      {/each}
+  <div class="center-position">
+    <div class="size-fixer">
+      {#if visible}
+        <div class="center">
+          {#each badges as badge}
+            <span class="badge">{badge}</span>
+          {/each}
+        </div>
+        <div class="center-position">
+          <div class="justify">
+            {description}
+          </div>
+        </div>
+      {/if}
     </div>
-    <div class="center-position">
-      <div class="justify">
-        {description}
-      </div>
-    </div>
-  {/if}
+  </div>
 {/if}
 
 <style>
+  .size-fixer {
+    width: 800px;
+    max-width: 90vh;
+  }
+
   .center-position {
     display: flex;
     justify-content: center;

@@ -10,19 +10,22 @@
   let selection = null;
   let breadcrumb = null;
 
-  function scroller() {
+  let scroller = () => {
     sections[selection.value].scrollIntoView();
-    page.scrollBy(0, -40);
-  }
+    page.scrollBy(0, -breadcrumb.offsetHeight - 4);
+  };
 
-  function updateBreadcrumb() {
+  let updateBreadcrumb = () => {
     let prev = null;
     for (const [index, section] of sections.entries()) {
-      if (breadcrumb.offsetTop + 50 < section.offsetTop) {
+      if (
+        breadcrumb.offsetTop + breadcrumb.offsetHeight + 5 <
+        section.offsetTop
+      ) {
         if (prev) {
           selection.value = index - 1;
         } else {
-          selection.value = name.innerText;
+          selection.value = index;
         }
         break;
       } else {
@@ -30,15 +33,20 @@
       }
       prev = section;
     }
-  }
+  };
 
   afterUpdate(() => {
+    name = document.querySelector("div.page div.content h1");
     sections = document.querySelectorAll("div.page div.content h2");
+    sections = Array.from(sections);
+    sections.unshift(name);
   });
 
   onMount(() => {
     name = document.querySelector("div.page div.content h1");
     sections = document.querySelectorAll("div.page div.content h2");
+    sections = Array.from(sections);
+    sections.unshift(name);
     page = document.querySelector("div.page");
     breadcrumb = document.querySelector("div.page div.content h4");
     selection = document.querySelector("div.page div.content h4 select");
@@ -52,7 +60,6 @@
       <span>>></span>
       <span class="section">
         <select on:change={scroller}>
-          <option value={name.innerText} hidden>{name.innerText}</option>
           {#each sections as section, index}
             <option value={index}>{section.innerText}</option>
           {:else}

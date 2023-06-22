@@ -3,14 +3,14 @@
   let light = "/images/light.svg";
   let src = dark;
 
-  function toggletheme() {
+  let toggletheme = () => {
     window.document.body.classList.toggle("light-mode");
     src = window.document.body.classList.contains("light-mode") ? light : dark;
     localStorage.setItem(
       "theme",
       window.document.body.classList.contains("light-mode") ? "light" : "dark"
     );
-  }
+  };
 
   let theme = localStorage.getItem("theme");
   if (theme) {

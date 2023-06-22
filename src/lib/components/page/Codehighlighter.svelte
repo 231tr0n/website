@@ -36,7 +36,7 @@
 <style>
   pre {
     margin: 0px;
-    font-size: 13px;
+    font-size: 15px;
     padding: 5px;
     overflow-x: auto;
   }

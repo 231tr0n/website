@@ -11,7 +11,7 @@
   let html = null;
   let render = false;
 
-  onMount(async function () {
+  onMount(async () => {
     try {
       script = await fetch("/resources/blog/tictactoe/index.js");
       css = await fetch("/resources/blog/tictactoe/style.css");

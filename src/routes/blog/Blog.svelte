@@ -3,19 +3,19 @@
 
   let blogPosts = [];
 
-  function blogPostCreator(post, badges, description, url) {
+  let blogPostCreator = (post, badges, description, url) => {
     return {
       post,
       badges,
       description,
       url,
     };
-  }
+  };
   blogPosts.push(
     blogPostCreator(
       "TicTacToe",
       ["javscript", "html", "css", "browser"],
-      "Creating TicTacToe game in browser with just plain html, css and javascript.",
+      "Creating TicTacToe game in browser with html, css and javascript.",
       "/blog/tictactoe"
     )
   );
