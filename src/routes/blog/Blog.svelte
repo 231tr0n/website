@@ -17,12 +17,6 @@
       ["javscript", "html", "css", "browser"],
       "Creating TicTacToe game in browser with html, css and javascript.",
       "/blog/tictactoe"
-    ),
-    blogPostCreator(
-      "TicTacToe",
-      ["javscript", "html", "css", "browser"],
-      "Creating TicTacToe game in browser with html, css and javascript.",
-      "/blog/tictactoe"
     )
   );
 </script>
