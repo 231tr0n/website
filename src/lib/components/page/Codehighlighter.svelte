@@ -22,12 +22,9 @@
     <div class="code-context">
       <span>{fileName}</span><span>{langName}</span>
     </div>
-    <hr />
     <pre><code>{@html codeHTML}</code></pre>
     {#if output !== ""}
-      <hr />
       <div class="code-context"><span>Output</span></div>
-      <hr />
       <pre>{output}</pre>
     {/if}
   </div>
@@ -46,15 +43,15 @@
     margin-bottom: 1em;
     padding: 5px;
     border-radius: 5px;
-    background-color: var(--color-dark-component);
+    background-color: var(--color-solarized-base02);
   }
 
   :global(body.light-mode) .code-block {
-    background-color: var(--color-light-component);
+    background-color: var(--color-solarized-base2);
   }
 
   .code-context {
-    background-color: var(--color-dark-background);
+    background-color: var(--color-dark-component);
     color: var(--color-dark-keyword);
     border-radius: 5px;
     padding: 5px;
@@ -64,7 +61,7 @@
   }
 
   :global(body.light-mode) .code-context {
-    background-color: var(--color-light-background);
+    background-color: var(--color-light-component);
     color: var(--color-light-keyword);
   }
 </style>

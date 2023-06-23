@@ -26,6 +26,30 @@
   });
 </script>
 
+<svelte:head>
+  <link
+    rel="preload"
+    as="document"
+    type="text/html"
+    src="/resources/blog/tictactoe/index.html"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    as="script"
+    type="text/javascript"
+    src="/resources/blog/tictactoe/index.js"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    as="style"
+    type="text/css"
+    src="/resources/blog/tictactoe/style.css"
+    crossorigin
+  />
+</svelte:head>
+
 <h1>TicTacToe</h1>
 
 <h2>Source Code</h2>

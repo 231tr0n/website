@@ -2,6 +2,16 @@
   import Heading from "./Heading.svelte";
 </script>
 
+<svelte:head>
+  <link
+    rel="preload"
+    as="image"
+    type="image/png"
+    href="/images/zeltron.png"
+    crossorigin
+  />
+</svelte:head>
+
 <div>
   <a href="https://231tr0n.github.io" target="_blank">
     <img alt="Zeltron" src="/images/zeltron.png" />

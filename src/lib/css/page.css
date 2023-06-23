@@ -49,31 +49,27 @@ body.light-mode .highlightkeyword {
 }
 
 h1 {
-  border-radius: 5px;
   padding-left: 5px;
   padding-right: 5px;
+  border-bottom: 1px solid var(--color-dark-foreground);
   font-weight: bold;
-  text-align: center;
-  background-color: var(--color-dark-component);
   color: var(--color-dark-heading);
 }
 
 body.light-mode h1 {
-  background-color: var(--color-light-component);
+  border-bottom: 1px solid var(--color-light-foreground);
   color: var(--color-light-heading);
 }
 
 h2 {
-  border-radius: 5px;
   padding-left: 5px;
   padding-right: 5px;
   font-weight: bold;
-  text-align: center;
-  background-color: var(--color-dark-component);
+  border-bottom: 1px solid var(--color-dark-foreground);
 }
 
 body.light-mode h2 {
-  background-color: var(--color-light-component);
+  border-bottom: 1px solid var(--color-light-foreground);
 }
 
 h3 {

@@ -4,6 +4,58 @@
   import "$lib/css/main.css";
 </script>
 
+<svelte:head>
+  <link
+    rel="preload"
+    as="font"
+    type="font/otf"
+    href="/fonts/HurmitNerdFontMono-Bold.otf"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    as="font"
+    type="font/otf"
+    href="/fonts/HurmitNerdFontMono-BoldItalic.otf"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    as="font"
+    type="font/otf"
+    href="/fonts/HurmitNerdFontMono-Italic.otf"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    as="font"
+    type="font/otf"
+    href="/fonts/HurmitNerdFontMono-LightItalic.otf"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    as="font"
+    type="font/otf"
+    href="/fonts/HurmitNerdFontMono-Light.otf"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    as="font"
+    type="font/otf"
+    href="/fonts/HurmitNerdFontMono-Regular.otf"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    as="image"
+    type="image/png"
+    href="/images/background.png"
+    crossorigin
+  />
+</svelte:head>
+
 <div class="body">
   <Navbar />
   <div class="background">

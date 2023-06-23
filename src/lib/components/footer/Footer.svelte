@@ -1,3 +1,48 @@
+<svelte:head>
+  <link
+    rel="preload"
+    as="image"
+    type="image/svg+xml"
+    href="/images/gmail.svg"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    as="image"
+    type="image/svg+xml"
+    href="/images/github-dark.svg"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    as="image"
+    type="image/svg+xml"
+    href="/images/github-light.svg"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    as="image"
+    type="image/svg+xml"
+    href="/images/gitlab.svg"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    as="image"
+    type="image/svg+xml"
+    href="/images/linkedin.svg"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    as="image"
+    type="image/svg+xml"
+    href="/images/twitter.svg"
+    crossorigin
+  />
+</svelte:head>
+
 <div>
   <a target="_blank" href="mailto:zeltronsrikar@gmail.com">
     <img alt="Gmail" src="/images/gmail.svg" />

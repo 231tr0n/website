@@ -11,19 +11,20 @@
 </script>
 
 {#if post && badges && description}
-  <div class="post">
-    <h2>
-      {post}
-    </h2>
-    <div class="padder" />
-    <button on:click={toggle}
-      ><span class="accordion-button"
-        >{#if visible}▲{:else}▼{/if}</span
-      ></button
-    >
-    <a href={url}><button>Open</button></a>
+  <div class="wrapper">
+    <div class="post">
+      <button on:click={toggle}
+        ><span class="accordion-button"
+          >{#if visible}▲{:else}▼{/if}</span
+        ></button
+      >
+      <h2>
+        {post}
+      </h2>
+      <a href={url}><button>Open</button></a>
+    </div>
   </div>
-  <div class="center-position">
+  <div class="center-content-position">
     <div class="size-fixer">
       {#if visible}
         <div class="center">
@@ -31,7 +32,7 @@
             <span class="badge">{badge}</span>
           {/each}
         </div>
-        <div class="center-position">
+        <div class="center-content-position">
           <div class="justify">
             {description}
           </div>
@@ -42,17 +43,23 @@
 {/if}
 
 <style>
+  .wrapper {
+    border-bottom: 1px solid var(--color-dark-foreground);
+  }
+
+  :global(body.light-mode) .wrapper {
+    border-bottom: 1px solid var(--color-light-foreground);
+  }
+
   .size-fixer {
     width: 800px;
     max-width: 90vh;
   }
 
-  .center-position {
+  .center-content-position {
+    margin-top: 1em;
     display: flex;
     justify-content: center;
-  }
-
-  .padder {
     padding: 5px;
   }
 
@@ -65,6 +72,12 @@
   h2 {
     display: inline-block;
     width: 100%;
+    border: 0px;
+    margin: 0px;
+  }
+
+  :global(body.light-mode) h2 {
+    border: 0px;
   }
 
   a {

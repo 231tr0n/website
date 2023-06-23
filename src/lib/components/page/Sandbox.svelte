@@ -8,7 +8,6 @@
     <div class="iframe-context">
       <span>{title}</span><span>sandbox</span>
     </div>
-    <hr />
     <div class="iframe-block">
       <iframe
         {title}
@@ -23,7 +22,7 @@
 
 <style>
   .iframe-context {
-    background-color: var(--color-dark-background);
+    background-color: var(--color-dark-component);
     color: var(--color-dark-keyword);
     border-radius: 5px;
     padding: 5px;
@@ -33,7 +32,7 @@
   }
 
   :global(body.light-mode) .iframe-context {
-    background-color: var(--color-light-background);
+    background-color: var(--color-light-component);
     color: var(--color-light-keyword);
   }
 
@@ -45,11 +44,11 @@
   .iframe {
     padding: 5px;
     border-radius: 5px;
-    background-color: var(--color-dark-component);
+    background-color: var(--color-solarized-base02);
   }
 
   :global(body.light-mode) div {
-    background-color: var(--color-light-component);
+    background-color: var(--color-solarized-base2);
   }
 
   iframe {

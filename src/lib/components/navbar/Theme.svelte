@@ -22,6 +22,23 @@
   }
 </script>
 
+<svelte:head>
+  <link
+    rel="preload"
+    as="image"
+    type="image/svg+xml"
+    href="/images/dark.svg"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    as="image"
+    type="image/svg+xml"
+    href="/images/light.svg"
+    crossorigin
+  />
+</svelte:head>
+
 <button on:click={toggletheme}>
   <img alt={src == dark ? "Dark Theme" : "Light Theme"} {src} />
 </button>
