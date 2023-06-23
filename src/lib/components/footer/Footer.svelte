@@ -43,7 +43,7 @@
   />
 </svelte:head>
 
-<div>
+<div class="flex-middle">
   <a target="_blank" href="mailto:zeltronsrikar@gmail.com">
     <img alt="Gmail" src="/images/gmail.svg" />
   </a>
@@ -72,23 +72,19 @@
 
   div {
     position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     bottom: 0px;
     left: 0px;
     right: 0px;
     height: 45px;
-    padding: 5px;
     box-sizing: border-box;
     z-index: 100;
     border-top: 1px solid var(--color-dark-foreground);
-    background-color: var(--color-dark-background);
+    background-color: var(--color-dark-strong-background);
   }
 
   :global(body.light-mode) div {
     border-top: 1px solid var(--color-light-foreground);
-    background-color: var(--color-light-background);
+    background-color: var(--color-light-strong-background);
   }
 
   img {

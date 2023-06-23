@@ -1,30 +1,22 @@
 <script>
   import Theme from "./Theme.svelte";
-  import Logo from "./Logo.svelte";
-  import Navlinks from "./Navlinks.svelte";
 </script>
 
 <header>
-  <div>
-    <Logo />
-    <div class="padder">
-      <Navlinks />
-    </div>
-  </div>
-  <div>
-    <Theme />
-  </div>
+  <span>
+    <a href="https://231tr0n.github.io" target="_blank">
+      <button><strong>231tr0n</strong></button>
+    </a>
+    <a href="/"><button>Home</button></a>
+    <a href="/blog"><button>Blog</button></a>
+  </span>
+  <Theme />
 </header>
 
 <style>
-  .padder {
-    padding: 3px;
-  }
-
-  div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  strong {
+    font-family: HurmitNerdFontMono-Bold;
+    font-weight: bolder;
   }
 
   header {
@@ -33,18 +25,21 @@
     left: 0px;
     right: 0px;
     height: 45px;
-    display: flex;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 7px;
+    padding-right: 7px;
     box-sizing: border-box;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
     z-index: 100;
     border-bottom: 1px solid var(--color-dark-foreground);
-    background-color: var(--color-dark-background);
+    background-color: var(--color-dark-strong-background);
   }
 
   :global(body.light-mode) header {
     border-bottom: 1px solid var(--color-light-foreground);
-    background-color: var(--color-light-background);
+    background-color: var(--color-light-strong-background);
   }
 </style>

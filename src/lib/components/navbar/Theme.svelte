@@ -45,23 +45,13 @@
 
 <style>
   button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--color-dark-component);
     height: 35px;
     width: 35px;
-    padding: 0px;
-    margin: 0px;
     border-radius: 50%;
   }
 
   img {
     height: 20px;
     width: 20px;
-  }
-
-  :global(body.light-mode) button {
-    background-color: var(--color-light-component);
   }
 </style>

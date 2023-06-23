@@ -53,17 +53,16 @@
   });
 </script>
 
-<div class="page" on:scroll={updateBreadcrumb}>
-  <div class="content">
-    <h4>
-      <span class="name">{name.innerText}</span>
-      <span>>></span>
-      <span class="section">
-        <select on:change={scroller}>
+<div class="page flex-center" on:scroll={updateBreadcrumb}>
+  <div class="content justify">
+    <h4 class="component center flex-middle">
+      <span>
+        {name.innerText} >&nbsp;
+        <select class="anchor body" on:change={scroller}>
           {#each sections as section, index}
             <option value={index}>{section.innerText}</option>
           {:else}
-            <option value="" hidden />
+            <option value="" />
           {/each}
         </select>
       </span>
@@ -73,25 +72,32 @@
 </div>
 
 <style>
-  .name {
-    color: var(--color-dark-heading);
+  .page {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
   }
 
-  :global(body.light-mode) .name {
-    color: var(--color-light-heading);
+  .content {
+    padding: 0px;
+    margin: 0px;
+    max-width: 90vw;
+    min-width: 50vw;
+    height: max-content;
+    padding-bottom: calc(100vh - 45px - 45px - 55px);
   }
 
   h4 {
-    vertical-align: middle;
     padding: 5px;
     position: sticky;
     top: 0px;
     border-radius: 5px;
-    background-color: var(--color-dark-component);
-    text-align: center;
   }
 
-  :global(body.light-mode) h4 {
-    background-color: var(--color-light-component);
+  select {
+    border-radius: 5px;
   }
 </style>

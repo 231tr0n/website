@@ -73,6 +73,7 @@
     fileName={"./index.html"}
   />
 {/if}
+
 <h2>Output</h2>
 {#if render}
   <Sandbox title="tic-tac-toe" src="/resources/blog/tictactoe/index.html" />

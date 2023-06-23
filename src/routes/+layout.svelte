@@ -56,16 +56,14 @@
   />
 </svelte:head>
 
-<div class="body">
-  <Navbar />
-  <div class="background">
-    <div class="opacity" />
-  </div>
-  <main>
-    <slot />
-  </main>
-  <Footer />
+<Navbar />
+<div class="background">
+  <div class="opacity" />
 </div>
+<main>
+  <slot />
+</main>
+<Footer />
 
 <style>
   .opacity {
@@ -73,7 +71,7 @@
     width: 100%;
     height: 100%;
     background-color: var(--color-dark-background);
-    opacity: 90%;
+    opacity: 92%;
     z-index: 2;
   }
 
@@ -85,7 +83,7 @@
     background-image: url("/images/background.png");
     background-position: center;
     background-repeat: no-repeat;
-    filter: blur(5px);
+    filter: blur(0px);
     position: fixed;
     top: 45px;
     left: 0px;
@@ -102,18 +100,8 @@
     bottom: 45px;
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
     overflow: hidden;
     z-index: 3;
-  }
-
-  .body {
-    overflow: hidden;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    margin: 0px;
-    padding: 0px;
   }
 </style>

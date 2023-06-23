@@ -11,10 +11,10 @@
 </script>
 
 {#if post && badges && description}
-  <div class="wrapper">
-    <div class="post">
+  <div class="underliner">
+    <div class="flex-middle">
       <button on:click={toggle}
-        ><span class="accordion-button"
+        ><span class="flex-middle"
           >{#if visible}▲{:else}▼{/if}</span
         ></button
       >
@@ -24,7 +24,7 @@
       <a href={url}><button>Open</button></a>
     </div>
   </div>
-  <div class="center-content-position">
+  <div class="accordion-content flex-center">
     <div class="size-fixer">
       {#if visible}
         <div class="center">
@@ -32,7 +32,7 @@
             <span class="badge">{badge}</span>
           {/each}
         </div>
-        <div class="center-content-position">
+        <div class="flex-center">
           <div class="justify">
             {description}
           </div>
@@ -43,11 +43,11 @@
 {/if}
 
 <style>
-  .wrapper {
+  .underliner {
     border-bottom: 1px solid var(--color-dark-foreground);
   }
 
-  :global(body.light-mode) .wrapper {
+  :global(body.light-mode) .underliner {
     border-bottom: 1px solid var(--color-light-foreground);
   }
 
@@ -56,21 +56,12 @@
     max-width: 90vh;
   }
 
-  .center-content-position {
+  .accordion-content {
     margin-top: 1em;
-    display: flex;
-    justify-content: center;
     padding: 5px;
   }
 
-  div.post {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
   h2 {
-    display: inline-block;
     width: 100%;
     border: 0px;
     margin: 0px;
@@ -80,25 +71,11 @@
     border: 0px;
   }
 
-  a {
-    font-size: 15px;
-  }
-
-  button {
-    display: inline-block;
-    margin-left: 0px;
-    margin-right: 5px;
-  }
-
-  div.center {
+  div.accordion-content {
     margin-bottom: 1em;
   }
 
-  span.accordion-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 5px;
-    padding-right: 5px;
+  div.justify {
+    margin-top: 1em;
   }
 </style>

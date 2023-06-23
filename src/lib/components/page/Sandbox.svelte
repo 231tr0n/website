@@ -4,11 +4,11 @@
 </script>
 
 {#if title && src}
-  <div class="iframe">
-    <div class="iframe-context">
+  <div class="iframe body">
+    <div class="iframe-context component">
       <span>{title}</span><span>sandbox</span>
     </div>
-    <div class="iframe-block">
+    <div class="iframe-block flex-center">
       <iframe
         {title}
         allowfullscreen
@@ -22,41 +22,27 @@
 
 <style>
   .iframe-context {
-    background-color: var(--color-dark-component);
-    color: var(--color-dark-keyword);
-    border-radius: 5px;
     padding: 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
-  :global(body.light-mode) .iframe-context {
-    background-color: var(--color-light-component);
-    color: var(--color-light-keyword);
-  }
-
   .iframe-block {
     padding: 10px;
-    display: flex;
-    justify-content: center;
   }
 
   .iframe {
     border-radius: 5px;
-    background-color: var(--color-solarized-base02);
+    border: 2px solid var(--color-dark-component-background);
   }
 
-  :global(body.light-mode) div {
-    background-color: var(--color-solarized-base2);
+  :global(body.light-mode) .iframe {
+    border: 2px solid var(--color-light-component-background);
   }
 
   iframe {
-    display: block;
     border: 0px;
-    display: flex;
-    overflow: scroll;
-    width: auto;
-    height: auto;
+    overflow: auto;
   }
 </style>
