@@ -37,12 +37,12 @@
   }
 
   .iframe-block {
+    padding: 10px;
     display: flex;
     justify-content: center;
   }
 
   .iframe {
-    padding: 5px;
     border-radius: 5px;
     background-color: var(--color-solarized-base02);
   }

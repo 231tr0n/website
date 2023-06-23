@@ -34,14 +34,13 @@
   pre {
     margin: 0px;
     font-size: 15px;
-    padding: 5px;
+    padding: 10px;
     overflow-x: auto;
   }
 
   .code-block {
     margin-top: 1em;
     margin-bottom: 1em;
-    padding: 5px;
     border-radius: 5px;
     background-color: var(--color-solarized-base02);
   }
