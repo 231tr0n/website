@@ -9,6 +9,6 @@
     font-size: 30px;
     padding: 1em;
     text-align: center;
-    color: var(--color-red);
+    color: var(--color-solarized-blue);
   }
 </style>

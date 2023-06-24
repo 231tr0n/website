@@ -1,6 +1,6 @@
 <script>
   let dark = "/images/dark.svg";
-  let light = "/images/light.svg";
+  let light = "/images/light.png";
   let src = dark;
 
   let toggletheme = () => {
@@ -34,7 +34,7 @@
     rel="preload"
     as="image"
     type="image/svg+xml"
-    href="/images/light.svg"
+    href="/images/light.png"
     crossorigin
   />
 </svelte:head>
