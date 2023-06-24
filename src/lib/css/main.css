@@ -27,8 +27,8 @@
   --color-dark-button-background: var(--color-dark-component-background);
   --color-dark-button-foreground: var(--color-dark-component-foreground);
 
-  --color-light-strong-background: var(--color-solarized-base2);
-  --color-light-background: var(--color-solarized-base3);
+  --color-light-strong-background: var(--color-solarized-base3);
+  --color-light-background: var(--color-solarized-base2);
   --color-light-foreground: var(--color-solarized-base00);
   --color-light-component-background: var(--color-solarized-base1);
   --color-light-component-foreground: var(--color-solarized-base03);

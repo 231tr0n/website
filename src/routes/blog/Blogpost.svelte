@@ -53,7 +53,7 @@
 
   .size-fixer {
     width: 800px;
-    max-width: 90vh;
+    max-width: 90vw;
   }
 
   .accordion-content {
