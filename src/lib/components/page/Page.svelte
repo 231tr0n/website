@@ -58,6 +58,8 @@
     <h4 class="component center flex-middle">
       <span>
         {name.innerText} >&nbsp;
+      </span>
+      <span>
         <select class="anchor body" on:change={scroller}>
           {#each sections as section, index}
             <option value={index}>{section.innerText}</option>
