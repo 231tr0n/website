@@ -12,34 +12,34 @@
     href="/fonts/HurmitNerdFontMono-Bold.otf"
     crossorigin
   />
-  <link
-    rel="preload"
-    as="font"
-    type="font/otf"
-    href="/fonts/HurmitNerdFontMono-BoldItalic.otf"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    as="font"
-    type="font/otf"
-    href="/fonts/HurmitNerdFontMono-Italic.otf"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    as="font"
-    type="font/otf"
-    href="/fonts/HurmitNerdFontMono-LightItalic.otf"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    as="font"
-    type="font/otf"
-    href="/fonts/HurmitNerdFontMono-Light.otf"
-    crossorigin
-  />
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="font" -->
+  <!--   type="font/otf" -->
+  <!--   href="/fonts/HurmitNerdFontMono-BoldItalic.otf" -->
+  <!--   crossorigin -->
+  <!-- /> -->
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="font" -->
+  <!--   type="font/otf" -->
+  <!--   href="/fonts/HurmitNerdFontMono-Italic.otf" -->
+  <!--   crossorigin -->
+  <!-- /> -->
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="font" -->
+  <!--   type="font/otf" -->
+  <!--   href="/fonts/HurmitNerdFontMono-LightItalic.otf" -->
+  <!--   crossorigin -->
+  <!-- /> -->
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="font" -->
+  <!--   type="font/otf" -->
+  <!--   href="/fonts/HurmitNerdFontMono-Light.otf" -->
+  <!--   crossorigin -->
+  <!-- /> -->
   <link
     rel="preload"
     as="font"
