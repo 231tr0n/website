@@ -13,14 +13,15 @@
 {#if post && badges && description}
   <div class="underliner">
     <div class="flex-middle">
+      <h2>
+        {post}
+      </h2>
       <button on:click={toggle}
         ><span class="flex-middle"
           >{#if visible}▲{:else}▼{/if}</span
         ></button
       >
-      <h2>
-        {post}
-      </h2>
+      <div class="padder" />
       <a href={url}><button>Open</button></a>
     </div>
   </div>
@@ -43,6 +44,10 @@
 {/if}
 
 <style>
+  .padder {
+    padding: 2px;
+  }
+
   .underliner {
     border-bottom: 1px solid var(--color-dark-foreground);
   }
