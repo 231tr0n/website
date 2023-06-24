@@ -43,7 +43,7 @@
   />
 </svelte:head>
 
-<div class="flex-middle">
+<footer class="flex-middle">
   <a target="_blank" href="mailto:zeltronsrikar@gmail.com">
     <img alt="Gmail" src="/images/gmail.svg" />
   </a>
@@ -59,7 +59,7 @@
   <a target="_blank" href="https://www.twitter.com/231tr0n">
     <img alt="Twitter" src="/images/twitter.svg" />
   </a>
-</div>
+</footer>
 
 <style>
   .github {
@@ -70,7 +70,7 @@
     content: url("/images/github-dark.svg");
   }
 
-  div {
+  footer {
     position: fixed;
     bottom: 0px;
     left: 0px;
@@ -82,7 +82,7 @@
     background-color: var(--color-dark-strong-background);
   }
 
-  :global(body.light-mode) div {
+  :global(body.light-mode) footer {
     border-top: 1px solid var(--color-light-foreground);
     background-color: var(--color-light-strong-background);
   }
