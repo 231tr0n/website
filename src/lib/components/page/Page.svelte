@@ -56,18 +56,13 @@
 <div class="page flex-center" on:scroll={updateBreadcrumb}>
   <div class="content justify">
     <h4 class="component center flex-middle">
-      <span>
-        {name.innerText} >&nbsp;
-      </span>
-      <span>
-        <select class="anchor body" on:change={scroller}>
-          {#each sections as section, index}
-            <option value={index}>{section.innerText}</option>
-          {:else}
-            <option value="" />
-          {/each}
-        </select>
-      </span>
+      <select class="anchor body" on:change={scroller}>
+        {#each sections as section, index}
+          <option value={index}>{section.innerText}</option>
+        {:else}
+          <option value="" />
+        {/each}
+      </select>
     </h4>
     <svelte:component this={blog} />
   </div>
