@@ -2,50 +2,50 @@
   <link
     rel="preload"
     as="image"
-    type="image/png"
-    href="/images/go.png"
+    type="image/avif"
+    href="/images/go.avif"
     crossorigin
   />
   <link
     rel="preload"
     as="image"
-    type="image/png"
-    href="/images/python.png"
+    type="image/avif"
+    href="/images/python.avif"
     crossorigin
   />
   <link
     rel="preload"
     as="image"
-    type="image/png"
-    href="/images/nodejs.png"
+    type="image/avif"
+    href="/images/nodejs.avif"
     crossorigin
   />
   <link
     rel="preload"
     as="image"
-    type="image/png"
-    href="/images/javascript.png"
+    type="image/avif"
+    href="/images/javascript.avif"
     crossorigin
   />
   <link
     rel="preload"
     as="image"
-    type="image/png"
-    href="/images/html.png"
+    type="image/avif"
+    href="/images/html.avif"
     crossorigin
   />
   <link
     rel="preload"
     as="image"
-    type="image/png"
-    href="/images/css.png"
+    type="image/avif"
+    href="/images/css.avif"
     crossorigin
   />
   <link
     rel="preload"
     as="image"
-    type="image/png"
-    href="/images/c.png"
+    type="image/avif"
+    href="/images/c.avif"
     crossorigin
   />
   <link
@@ -58,141 +58,141 @@
   <link
     rel="preload"
     as="image"
-    type="image/png"
-    href="/images/git.png"
+    type="image/avif"
+    href="/images/git.avif"
     crossorigin
   />
   <link
     rel="preload"
     as="image"
-    type="image/png"
-    href="/images/php.png"
+    type="image/avif"
+    href="/images/php.avif"
     crossorigin
   />
   <link
     rel="preload"
     as="image"
-    type="image/png"
-    href="/images/sql.png"
+    type="image/avif"
+    href="/images/sql.avif"
     crossorigin
   />
   <link
     rel="preload"
     as="image"
-    type="image/png"
-    href="/images/sveltekit.png"
+    type="image/avif"
+    href="/images/sveltekit.avif"
     crossorigin
   />
   <link
     rel="preload"
     as="image"
-    type="image/png"
-    href="/images/java.png"
+    type="image/avif"
+    href="/images/java.avif"
     crossorigin
   />
   <link
     rel="preload"
     as="image"
-    type="image/png"
-    href="/images/bash.png"
+    type="image/avif"
+    href="/images/bash.avif"
     crossorigin
   />
   <link
     rel="preload"
     as="image"
-    type="image/png"
-    href="/images/linux.png"
+    type="image/avif"
+    href="/images/linux.avif"
     crossorigin
   />
   <link
     rel="preload"
     as="image"
-    type="image/png"
-    href="/images/windows.png"
+    type="image/avif"
+    href="/images/windows.avif"
     crossorigin
   />
   <link
     rel="preload"
     as="image"
-    type="image/png"
-    href="/images/webappsec.png"
+    type="image/avif"
+    href="/images/webappsec.avif"
     crossorigin
   />
   <link
     rel="preload"
     as="image"
-    type="image/png"
-    href="/images/ai.png"
+    type="image/avif"
+    href="/images/ai.avif"
     crossorigin
   />
   <link
     rel="preload"
     as="image"
-    type="image/png"
-    href="/images/linuxmint.png"
+    type="image/avif"
+    href="/images/linuxmint.avif"
     crossorigin
   />
   <link
     rel="preload"
     as="image"
-    type="image/png"
-    href="/images/archlinux.png"
+    type="image/avif"
+    href="/images/archlinux.avif"
     crossorigin
   />
   <link
     rel="preload"
     as="image"
-    type="image/png"
-    href="/images/ubuntu.png"
+    type="image/avif"
+    href="/images/ubuntu.avif"
     crossorigin
   />
   <link
     rel="preload"
     as="image"
-    type="image/png"
-    href="/images/neovim.png"
+    type="image/avif"
+    href="/images/neovim.avif"
     crossorigin
   />
   <link
     rel="preload"
     as="image"
-    type="image/png"
-    href="/images/vim.png"
+    type="image/avif"
+    href="/images/vim.avif"
     crossorigin
   />
   <link
     rel="preload"
     as="image"
-    type="image/png"
-    href="/images/vscode.png"
+    type="image/avif"
+    href="/images/vscode.avif"
     crossorigin
   />
   <link
     rel="preload"
     as="image"
-    type="image/png"
-    href="/images/i3.png"
+    type="image/avif"
+    href="/images/i3.avif"
     crossorigin
   />
   <link
     rel="preload"
     as="image"
-    type="image/png"
-    href="/images/cinnamon.png"
+    type="image/avif"
+    href="/images/cinnamon.avif"
     crossorigin
   />
   <link
     rel="preload"
     as="image"
-    type="image/png"
-    href="/images/bspwm.png"
+    type="image/avif"
+    href="/images/bspwm.avif"
     crossorigin
   />
   <link
     rel="preload"
     as="image"
-    type="image/png"
-    href="/images/fish.png"
+    type="image/avif"
+    href="/images/fish.avif"
     crossorigin
   />
 </svelte:head>
@@ -309,64 +309,64 @@
 <h2>Skills</h2>
 <div class="center">
   <a target="_blank" href="https://go.dev">
-    <img class="logo" alt="Golang" src="/images/go.png" />
+    <img class="logo" alt="Golang" src="/images/go.avif" />
   </a>
   <a target="_blank" href="https://www.python.org">
-    <img class="logo" alt="Python" src="/images/python.png" />
+    <img class="logo" alt="Python" src="/images/python.avif" />
   </a>
   <a target="_blank" href="https://nodejs.org/en">
-    <img class="logo" alt="Nodejs" src="/images/nodejs.png" />
+    <img class="logo" alt="Nodejs" src="/images/nodejs.avif" />
   </a>
   <a
     target="_blank"
     href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
   >
-    <img class="logo" alt="Javascript" src="/images/javascript.png" />
+    <img class="logo" alt="Javascript" src="/images/javascript.avif" />
   </a>
   <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML">
-    <img class="logo" alt="Html" src="/images/html.png" />
+    <img class="logo" alt="Html" src="/images/html.avif" />
   </a>
   <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS">
-    <img class="logo" alt="Css" src="/images/css.png" />
+    <img class="logo" alt="Css" src="/images/css.avif" />
   </a>
   <a target="_blank" href="https://gcc.gnu.org">
-    <img class="logo" alt="C" src="/images/c.png" />
+    <img class="logo" alt="C" src="/images/c.avif" />
   </a>
   <a target="_blank" href="https://www.docker.com">
     <img class="logo" alt="Docker" src="/images/docker.svg" />
   </a>
   <a target="_blank" href="https://git-scm.com">
-    <img class="logo" alt="Git" src="/images/git.png" />
+    <img class="logo" alt="Git" src="/images/git.avif" />
   </a>
   <a target="_blank" href="https://www.php.net">
-    <img class="logo" alt="Php" src="/images/php.png" />
+    <img class="logo" alt="Php" src="/images/php.avif" />
   </a>
   <a target="_blank" href="https://en.wikipedia.org/wiki/SQL">
-    <img class="logo" alt="Sql" src="/images/sql.png" />
+    <img class="logo" alt="Sql" src="/images/sql.avif" />
   </a>
   <a target="_blank" href="https://kit.svelte.dev">
-    <img class="logo" alt="Sveltekit" src="/images/sveltekit.png" />
+    <img class="logo" alt="Sveltekit" src="/images/sveltekit.avif" />
   </a>
   <a target="_blank" href="https://openjdk.org">
-    <img class="logo" alt="Java" src="/images/java.png" />
+    <img class="logo" alt="Java" src="/images/java.avif" />
   </a>
   <a target="_blank" href="https://www.gnu.org/software/bash">
-    <img class="logo" alt="Bash" src="/images/bash.png" />
+    <img class="logo" alt="Bash" src="/images/bash.avif" />
   </a>
   <a target="_blank" href="https://en.wikipedia.org/wiki/Linux">
-    <img class="logo" alt="Linux" src="/images/linux.png" />
+    <img class="logo" alt="Linux" src="/images/linux.avif" />
   </a>
   <a target="_blank" href="https://www.microsoft.com/en-us/windows">
-    <img class="logo" alt="Windows" src="/images/windows.png" />
+    <img class="logo" alt="Windows" src="/images/windows.avif" />
   </a><br />
   <a target="_blank" href="https://en.wikipedia.org/wiki/Application_security">
-    <img class="big-logo" alt="Windows" src="/images/webappsec.png" />
+    <img class="big-logo" alt="Windows" src="/images/webappsec.avif" />
   </a>
   <a
     target="_blank"
     href="https://cloud.google.com/learn/artificial-intelligence-vs-machine-learning"
   >
-    <img class="big-logo" alt="Windows" src="/images/ai.png" />
+    <img class="big-logo" alt="Windows" src="/images/ai.avif" />
   </a>
 </div>
 
@@ -374,49 +374,49 @@
 <h3>Operating systems</h3>
 <div class="center">
   <a target="_blank" href="https://archlinux.org">
-    <img class="logo" alt="Archlinux" src="/images/archlinux.png" />
+    <img class="logo" alt="Archlinux" src="/images/archlinux.avif" />
   </a>
   <a target="_blank" href="https://linuxmint.com">
-    <img class="logo" alt="Linuxmint" src="/images/linuxmint.png" />
+    <img class="logo" alt="Linuxmint" src="/images/linuxmint.avif" />
   </a>
   <a target="_blank" href="https://ubuntu.com/download/desktop">
-    <img class="logo" alt="Ubuntu" src="/images/ubuntu.png" />
+    <img class="logo" alt="Ubuntu" src="/images/ubuntu.avif" />
   </a>
   <a target="_blank" href="https://www.microsoft.com/en-us/windows">
-    <img class="logo" alt="Windows" src="/images/windows.png" />
+    <img class="logo" alt="Windows" src="/images/windows.avif" />
   </a>
 </div>
 <h3>Text Editors</h3>
 <div class="center">
   <a target="_blank" href="https://neovim.io">
-    <img class="logo" alt="Neovim" src="/images/neovim.png" />
+    <img class="logo" alt="Neovim" src="/images/neovim.avif" />
   </a>
   <a target="_blank" href="https://www.vim.org">
-    <img class="logo" alt="Vim" src="/images/vim.png" />
+    <img class="logo" alt="Vim" src="/images/vim.avif" />
   </a>
   <a target="_blank" href="https://code.visualstudio.com">
-    <img class="logo" alt="Vscode" src="/images/vscode.png" />
+    <img class="logo" alt="Vscode" src="/images/vscode.avif" />
   </a>
 </div>
 <h3>GUIs for Xserver</h3>
 <div class="center">
   <a target="_blank" href="https://i3wm.org">
-    <img class="logo" alt="i3" src="/images/i3.png" />
+    <img class="logo" alt="i3" src="/images/i3.avif" />
   </a>
   <a target="_blank" href="https://projects.linuxmint.com/cinnamon">
-    <img class="logo" alt="Cinnamon" src="/images/cinnamon.png" />
+    <img class="logo" alt="Cinnamon" src="/images/cinnamon.avif" />
   </a>
   <a target="_blank" href="https://github.com/baskerville/bspwm">
-    <img class="logo" alt="Bspwm" src="/images/bspwm.png" />
+    <img class="logo" alt="Bspwm" src="/images/bspwm.avif" />
   </a>
 </div>
 <h3>Shells</h3>
 <div class="center">
   <a target="_blank" href="https://www.gnu.org/software/bash">
-    <img class="logo" alt="Bash" src="/images/bash.png" />
+    <img class="logo" alt="Bash" src="/images/bash.avif" />
   </a>
   <a target="_blank" href="https://fishshell.com">
-    <img class="logo" alt="Fish" src="/images/fish.png" />
+    <img class="logo" alt="Fish" src="/images/fish.avif" />
   </a>
 </div>
 

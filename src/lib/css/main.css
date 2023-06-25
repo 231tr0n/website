@@ -65,37 +65,37 @@ body.light-mode ::-webkit-scrollbar-thumb:hover {
 
 @font-face {
   font-family: HurmitNerdFontMono-Bold;
-  src: url("/fonts/HurmitNerdFontMono-Bold.otf") format("opentype");
+  src: url("/fonts/HurmitNerdFontMono-Bold.woff2") format("opentype");
   font-display: swap;
 }
 
 /* @font-face { */
 /*   font-family: HurmitNerdFontMono-BoldItalic; */
-/*   src: url("/fonts/HurmitNerdFontMono-BoldItalic.otf") format("opentype"); */
+/*   src: url("/fonts/HurmitNerdFontMono-BoldItalic.woff2") format("opentype"); */
 /*   font-display: swap; */
 /* } */
 
 /* @font-face { */
 /*   font-family: HurmitNerdFontMono-Italic; */
-/*   src: url("/fonts/HurmitNerdFontMono-Italic.otf") format("opentype"); */
+/*   src: url("/fonts/HurmitNerdFontMono-Italic.woff2") format("opentype"); */
 /*   font-display: swap; */
 /* } */
 
 /* @font-face { */
 /*   font-family: HurmitNerdFontMono-LightItalic; */
-/*   src: url("/fonts/HurmitNerdFontMono-LightItalic.otf") format("opentype"); */
+/*   src: url("/fonts/HurmitNerdFontMono-LightItalic.woff2") format("opentype"); */
 /*   font-display: swap; */
 /* } */
 
 /* @font-face { */
 /*   font-family: HurmitNerdFontMono-Light; */
-/*   src: url("/fonts/HurmitNerdFontMono-Light.otf") format("opentype"); */
+/*   src: url("/fonts/HurmitNerdFontMono-Light.woff2") format("opentype"); */
 /*   font-display: swap; */
 /* } */
 
 @font-face {
   font-family: HurmitNerdFontMono-Regular;
-  src: url("/fonts/HurmitNerdFontMono-Regular.otf") format("opentype");
+  src: url("/fonts/HurmitNerdFontMono-Regular.woff2") format("opentype");
   font-display: swap;
 }
 

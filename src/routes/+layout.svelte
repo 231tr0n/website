@@ -8,50 +8,50 @@
   <link
     rel="preload"
     as="font"
-    type="font/otf"
-    href="/fonts/HurmitNerdFontMono-Bold.otf"
+    type="font/woff2"
+    href="/fonts/HurmitNerdFontMono-Bold.woff2"
     crossorigin
   />
   <!-- <link -->
   <!--   rel="preload" -->
   <!--   as="font" -->
-  <!--   type="font/otf" -->
-  <!--   href="/fonts/HurmitNerdFontMono-BoldItalic.otf" -->
+  <!--   type="font/woff2" -->
+  <!--   href="/fonts/HurmitNerdFontMono-BoldItalic.woff2" -->
   <!--   crossorigin -->
   <!-- /> -->
   <!-- <link -->
   <!--   rel="preload" -->
   <!--   as="font" -->
-  <!--   type="font/otf" -->
-  <!--   href="/fonts/HurmitNerdFontMono-Italic.otf" -->
+  <!--   type="font/woff2" -->
+  <!--   href="/fonts/HurmitNerdFontMono-Italic.woff2" -->
   <!--   crossorigin -->
   <!-- /> -->
   <!-- <link -->
   <!--   rel="preload" -->
   <!--   as="font" -->
-  <!--   type="font/otf" -->
-  <!--   href="/fonts/HurmitNerdFontMono-LightItalic.otf" -->
+  <!--   type="font/woff2" -->
+  <!--   href="/fonts/HurmitNerdFontMono-LightItalic.woff2" -->
   <!--   crossorigin -->
   <!-- /> -->
   <!-- <link -->
   <!--   rel="preload" -->
   <!--   as="font" -->
-  <!--   type="font/otf" -->
-  <!--   href="/fonts/HurmitNerdFontMono-Light.otf" -->
+  <!--   type="font/woff2" -->
+  <!--   href="/fonts/HurmitNerdFontMono-Light.woff2" -->
   <!--   crossorigin -->
   <!-- /> -->
   <link
     rel="preload"
     as="font"
-    type="font/otf"
-    href="/fonts/HurmitNerdFontMono-Regular.otf"
+    type="font/woff2"
+    href="/fonts/HurmitNerdFontMono-Regular.woff2"
     crossorigin
   />
   <link
     rel="preload"
     as="image"
-    type="image/png"
-    href="/images/background.png"
+    type="image/avif"
+    href="/images/background.avif"
     crossorigin
   />
 </svelte:head>
@@ -80,7 +80,7 @@
   }
 
   .background {
-    background-image: url("/images/background.png");
+    background-image: url("/images/background.avif");
     background-position: center;
     background-repeat: no-repeat;
     filter: blur(5px);
