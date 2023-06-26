@@ -45,6 +45,9 @@
 
 <style>
   button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 35px;
     width: 35px;
     border-radius: 50%;

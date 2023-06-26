@@ -1,200 +1,200 @@
 <svelte:head>
-  <link
-    rel="preload"
-    as="image"
-    type="image/avif"
-    href="/images/go.avif"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    as="image"
-    type="image/avif"
-    href="/images/python.avif"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    as="image"
-    type="image/avif"
-    href="/images/nodejs.avif"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    as="image"
-    type="image/avif"
-    href="/images/javascript.avif"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    as="image"
-    type="image/avif"
-    href="/images/html.avif"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    as="image"
-    type="image/avif"
-    href="/images/css.avif"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    as="image"
-    type="image/avif"
-    href="/images/c.avif"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    as="image"
-    type="image/svg+xml"
-    href="/images/docker.svg"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    as="image"
-    type="image/avif"
-    href="/images/git.avif"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    as="image"
-    type="image/avif"
-    href="/images/php.avif"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    as="image"
-    type="image/avif"
-    href="/images/sql.avif"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    as="image"
-    type="image/avif"
-    href="/images/sveltekit.avif"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    as="image"
-    type="image/avif"
-    href="/images/java.avif"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    as="image"
-    type="image/avif"
-    href="/images/bash.avif"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    as="image"
-    type="image/avif"
-    href="/images/linux.avif"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    as="image"
-    type="image/avif"
-    href="/images/windows.avif"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    as="image"
-    type="image/avif"
-    href="/images/webappsec.avif"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    as="image"
-    type="image/avif"
-    href="/images/ai.avif"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    as="image"
-    type="image/avif"
-    href="/images/linuxmint.avif"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    as="image"
-    type="image/avif"
-    href="/images/archlinux.avif"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    as="image"
-    type="image/avif"
-    href="/images/ubuntu.avif"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    as="image"
-    type="image/avif"
-    href="/images/neovim.avif"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    as="image"
-    type="image/avif"
-    href="/images/vim.avif"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    as="image"
-    type="image/avif"
-    href="/images/vscode.avif"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    as="image"
-    type="image/avif"
-    href="/images/i3.avif"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    as="image"
-    type="image/avif"
-    href="/images/cinnamon.avif"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    as="image"
-    type="image/avif"
-    href="/images/bspwm.avif"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    as="image"
-    type="image/avif"
-    href="/images/fish.avif"
-    crossorigin
-  />
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="image" -->
+  <!--   type="image/avif" -->
+  <!--   href="/images/go.avif" -->
+  <!--   crossorigin -->
+  <!-- /> -->
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="image" -->
+  <!--   type="image/avif" -->
+  <!--   href="/images/python.avif" -->
+  <!--   crossorigin -->
+  <!-- /> -->
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="image" -->
+  <!--   type="image/avif" -->
+  <!--   href="/images/nodejs.avif" -->
+  <!--   crossorigin -->
+  <!-- /> -->
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="image" -->
+  <!--   type="image/avif" -->
+  <!--   href="/images/javascript.avif" -->
+  <!--   crossorigin -->
+  <!-- /> -->
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="image" -->
+  <!--   type="image/avif" -->
+  <!--   href="/images/html.avif" -->
+  <!--   crossorigin -->
+  <!-- /> -->
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="image" -->
+  <!--   type="image/avif" -->
+  <!--   href="/images/css.avif" -->
+  <!--   crossorigin -->
+  <!-- /> -->
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="image" -->
+  <!--   type="image/avif" -->
+  <!--   href="/images/c.avif" -->
+  <!--   crossorigin -->
+  <!-- /> -->
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="image" -->
+  <!--   type="image/svg+xml" -->
+  <!--   href="/images/docker.svg" -->
+  <!--   crossorigin -->
+  <!-- /> -->
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="image" -->
+  <!--   type="image/avif" -->
+  <!--   href="/images/git.avif" -->
+  <!--   crossorigin -->
+  <!-- /> -->
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="image" -->
+  <!--   type="image/avif" -->
+  <!--   href="/images/php.avif" -->
+  <!--   crossorigin -->
+  <!-- /> -->
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="image" -->
+  <!--   type="image/avif" -->
+  <!--   href="/images/sql.avif" -->
+  <!--   crossorigin -->
+  <!-- /> -->
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="image" -->
+  <!--   type="image/avif" -->
+  <!--   href="/images/sveltekit.avif" -->
+  <!--   crossorigin -->
+  <!-- /> -->
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="image" -->
+  <!--   type="image/avif" -->
+  <!--   href="/images/java.avif" -->
+  <!--   crossorigin -->
+  <!-- /> -->
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="image" -->
+  <!--   type="image/avif" -->
+  <!--   href="/images/bash.avif" -->
+  <!--   crossorigin -->
+  <!-- /> -->
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="image" -->
+  <!--   type="image/avif" -->
+  <!--   href="/images/linux.avif" -->
+  <!--   crossorigin -->
+  <!-- /> -->
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="image" -->
+  <!--   type="image/avif" -->
+  <!--   href="/images/windows.avif" -->
+  <!--   crossorigin -->
+  <!-- /> -->
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="image" -->
+  <!--   type="image/avif" -->
+  <!--   href="/images/webappsec.avif" -->
+  <!--   crossorigin -->
+  <!-- /> -->
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="image" -->
+  <!--   type="image/avif" -->
+  <!--   href="/images/ai.avif" -->
+  <!--   crossorigin -->
+  <!-- /> -->
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="image" -->
+  <!--   type="image/avif" -->
+  <!--   href="/images/linuxmint.avif" -->
+  <!--   crossorigin -->
+  <!-- /> -->
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="image" -->
+  <!--   type="image/avif" -->
+  <!--   href="/images/archlinux.avif" -->
+  <!--   crossorigin -->
+  <!-- /> -->
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="image" -->
+  <!--   type="image/avif" -->
+  <!--   href="/images/ubuntu.avif" -->
+  <!--   crossorigin -->
+  <!-- /> -->
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="image" -->
+  <!--   type="image/avif" -->
+  <!--   href="/images/neovim.avif" -->
+  <!--   crossorigin -->
+  <!-- /> -->
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="image" -->
+  <!--   type="image/avif" -->
+  <!--   href="/images/vim.avif" -->
+  <!--   crossorigin -->
+  <!-- /> -->
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="image" -->
+  <!--   type="image/avif" -->
+  <!--   href="/images/vscode.avif" -->
+  <!--   crossorigin -->
+  <!-- /> -->
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="image" -->
+  <!--   type="image/avif" -->
+  <!--   href="/images/i3.avif" -->
+  <!--   crossorigin -->
+  <!-- /> -->
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="image" -->
+  <!--   type="image/avif" -->
+  <!--   href="/images/cinnamon.avif" -->
+  <!--   crossorigin -->
+  <!-- /> -->
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="image" -->
+  <!--   type="image/avif" -->
+  <!--   href="/images/bspwm.avif" -->
+  <!--   crossorigin -->
+  <!-- /> -->
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="image" -->
+  <!--   type="image/avif" -->
+  <!--   href="/images/fish.avif" -->
+  <!--   crossorigin -->
+  <!-- /> -->
 </svelte:head>
 
 <h1>Home</h1>
