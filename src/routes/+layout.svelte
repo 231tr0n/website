@@ -71,7 +71,7 @@
     width: 100%;
     height: 100%;
     background-color: var(--color-dark-background);
-    opacity: 85%;
+    opacity: 80%;
     z-index: 2;
   }
 
@@ -83,7 +83,7 @@
     background-image: url("/images/background.avif");
     background-position: center;
     background-repeat: no-repeat;
-    filter: blur(5px);
+    filter: blur(0px);
     position: fixed;
     top: 45px;
     left: 0px;

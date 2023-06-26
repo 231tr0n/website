@@ -77,6 +77,7 @@
     </h4>
     <svelte:component this={blog} />
   </div>
+  <div class="body border" />
 </div>
 
 <style>
@@ -90,11 +91,24 @@
   }
 
   .content {
-    padding: 0px;
+    z-index: 5;
     margin: 0px;
-    max-width: 90vw;
-    min-width: 50vw;
+    padding: 0px;
+    max-width: 85vw;
+    width: 900px;
     height: max-content;
+    text-align: left;
+  }
+
+  div.body {
+    filter: blur(0px);
+    opacity: 85%;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    z-index: 4;
+    width: 950px;
+    max-width: 90vw;
   }
 
   h4 {
