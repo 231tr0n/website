@@ -23,20 +23,20 @@
 </script>
 
 <svelte:head>
-  <link
-    rel="preload"
-    as="image"
-    type="image/svg+xml"
-    href="/images/dark.svg"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    as="image"
-    type="image/svg+xml"
-    href="/images/light.avif"
-    crossorigin
-  />
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="image" -->
+  <!--   type="image/svg+xml" -->
+  <!--   href="/images/dark.svg" -->
+  <!--   crossorigin -->
+  <!-- /> -->
+  <!-- <link -->
+  <!--   rel="preload" -->
+  <!--   as="image" -->
+  <!--   type="image/svg+xml" -->
+  <!--   href="/images/light.avif" -->
+  <!--   crossorigin -->
+  <!-- /> -->
 </svelte:head>
 
 <button on:click={toggletheme}>
