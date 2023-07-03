@@ -6,7 +6,7 @@
   export let code = "";
   export let langDef = "";
   export let langName = "";
-  export let filePath = "./";
+  export let filePath = ".";
   export let fileName = "";
   export let output = "";
   let codeHTML = "";
