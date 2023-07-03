@@ -58,19 +58,22 @@
     code={script}
     langDef={highlightJs}
     langName={"javascript"}
-    fileName={"./index.js"}
+    filePath={"./"}
+    fileName={"index.js"}
   />
   <Codehighlighter
     code={css}
     langDef={highlightCss}
     langName={"css"}
-    fileName={"./style.css"}
+    filePath={"./"}
+    fileName={"style.css"}
   />
   <Codehighlighter
     code={html}
     langDef={highlightXml}
     langName={"html"}
-    fileName={"./index.html"}
+    filePath={"./"}
+    fileName={"index.html"}
   />
 {/if}
 

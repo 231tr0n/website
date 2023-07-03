@@ -70,7 +70,7 @@ body.light-mode ::-webkit-scrollbar-thumb:hover {
 
 @font-face {
   font-family: HurmitNerdFontMono-Bold;
-  src: url("/fonts/HurmitNerdFontMono-Bold.woff2") format("opentype");
+  src: url("/fonts/HurmitNerdFontMono-Bold.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -100,7 +100,7 @@ body.light-mode ::-webkit-scrollbar-thumb:hover {
 
 @font-face {
   font-family: HurmitNerdFontMono-Regular;
-  src: url("/fonts/HurmitNerdFontMono-Regular.woff2") format("opentype");
+  src: url("/fonts/HurmitNerdFontMono-Regular.woff2") format("woff2");
   font-display: swap;
 }
 

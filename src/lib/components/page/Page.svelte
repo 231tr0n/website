@@ -112,6 +112,7 @@
   }
 
   h4 {
+    z-index: 6;
     padding: 5px;
     position: sticky;
     top: 0px;

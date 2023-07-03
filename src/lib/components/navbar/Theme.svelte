@@ -1,4 +1,5 @@
 <script>
+  import { lightMode } from "$lib/stores/theme";
   let dark = "/images/dark.svg";
   let light = "/images/light.avif";
   let src = dark;
@@ -10,12 +11,20 @@
       "theme",
       window.document.body.classList.contains("light-mode") ? "light" : "dark"
     );
+    if (window.document.body.classList.contains("light-mode")) {
+      lightMode.set(true);
+    } else {
+      lightMode.set(false);
+    }
   };
 
   let theme = localStorage.getItem("theme");
   if (theme) {
     if (theme == "light") {
+      lightMode.set(true);
       toggletheme();
+    } else {
+      lightMode.set(false);
     }
   } else {
     localStorage.setItem("theme", "dark");

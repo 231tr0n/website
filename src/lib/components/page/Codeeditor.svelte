@@ -1,83 +1,80 @@
 <script>
-  import { onDestroy, onMount } from "svelte";
-  import highlightjs from "highlight.js/lib/core";
-  import "highlight.js/styles/base16/solarized-dark.css";
+  import { onMount } from "svelte";
+  import ace from "ace-code";
+  import solarized_light from "ace-code/src/theme/solarized_light";
+  import solarized_dark from "ace-code/src/theme/solarized_dark";
+  import vim from "ace-code/src/keyboard/vim";
+  import { lightMode } from "$lib/stores/theme";
+  import "$lib/css/editor.css";
 
-  export let code = "";
-  export let langDef = "";
   export let langName = "";
-  export let filePath = "./";
-  export let fileName = "";
-  export let output = "";
-  let codeHTML = "";
-  let codeElement = "";
-  let fullscreen = false;
-  let copied = false;
-  let anchor = "";
-  let fileUrl = "";
-  let lineNumber = "";
+  export let vimMode = false;
+  export let mode = "";
+  export let readOnly = false;
 
-  let toggleFullscreen = () => {
-    if (document.fullscreenElement) {
-      document.exitFullscreen();
-    } else {
-      codeElement.requestFullscreen();
-    }
-  };
+  let editorDiv = "";
+  let editor = "";
+  let editorElement = "";
+  let copied = false;
+  let fullscreen = false;
 
   let copy = () => {
-    navigator.clipboard.writeText(code);
+    navigator.clipboard.writeText(editor.session.getValue());
     copied = true;
     setTimeout(() => {
       copied = false;
     }, 2000);
   };
 
+  let toggleFullscreen = () => {
+    if (document.fullscreenElement) {
+      document.exitFullscreen();
+    } else {
+      editorElement.requestFullscreen();
+    }
+  };
+
   onMount(() => {
-    codeElement.onfullscreenchange = () => {
+    editorDiv.id = Math.random().toString(16);
+    editor = ace.edit(editorDiv.id);
+    editor.setTheme(solarized_dark);
+    if (vimMode) {
+      editor.setKeyboardHandler(vim.handler);
+    }
+    if (mode) {
+      editor.session.setMode(new mode.Mode());
+    }
+    editor.setReadOnly(readOnly);
+    editor.session.setTabSize(2);
+    editor.session.setUseSoftTabs(true);
+    editor.setShowPrintMargin(false);
+    lightMode.subscribe((value) => {
+      if (value) {
+        editor.setTheme(solarized_light);
+      } else {
+        editor.setTheme(solarized_dark);
+      }
+    });
+
+    editorElement.onfullscreenchange = () => {
       if (document.fullscreenElement) {
         fullscreen = true;
       } else {
         fullscreen = false;
       }
     };
-
-    if (code && langName && langDef) {
-      highlightjs.registerLanguage(langName, langDef);
-      codeHTML = highlightjs.highlight(code, {
-        language: langName,
-      }).value;
-    }
-
-    let n = code.trim().split("\n").length;
-    console.log(code.split("\n"));
-
-    for (let i = 0; i < n; i++) {
-      lineNumber.innerText += (i + 1).toString() + "\n";
-    }
-
-    const blob = new Blob([code], { type: "text/plain" });
-    fileUrl = URL.createObjectURL(blob);
-    anchor.href = fileUrl;
-    anchor.download = fileName;
-  });
-
-  onDestroy(() => {
-    URL.revokeObjectURL(fileUrl);
   });
 </script>
 
-{#if code && langDef && langName}
+{#if mode && langName}
   <div class="flex-middle">
-    <div bind:this={codeElement} class="code-block body">
-      <div class="filename code-context component">
-        <span
-          >{filePath[filePath.length - 1] === "/"
-            ? filePath
-            : filePath + "/"}{fileName}</span
-        >
+    <div bind:this={editorElement} class="editor-block body">
+      <div class="filename editor-context component">
+        <span>
+          {"Editor"}
+        </span>
       </div>
-      <div class="code-context component">
+      <div class="editor-context component">
         <span>
           <button on:click={copy}>
             {#if !copied}
@@ -145,46 +142,16 @@
                 />
               </svg>
             {/if}
-          </button><a href="/favicon.ico" bind:this={anchor}
-            ><button>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-download"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"
-                />
-                <path
-                  d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"
-                />
-              </svg>
-            </button></a
-          >
+          </button>
         </span>
         <span>{langName}</span>
       </div>
-      <div class="inline-grid">
-        <div bind:this={lineNumber} class="line-number body" />
-        <div><pre><code>{@html codeHTML}</code></pre></div>
-      </div>
-      {#if output}
-        <div class="code-context component"><span>Output</span></div>
-        <pre>{output}</pre>
-      {/if}
+      <div bind:this={editorDiv} />
     </div>
   </div>
 {/if}
 
 <style>
-  .inline-grid {
-    display: grid;
-    grid-template-columns: min-content auto;
-  }
-
   button {
     padding: 3px;
     display: inline-flex;
@@ -200,7 +167,7 @@
     border-bottom: 1px solid var(--color-light-component-foreground);
   }
 
-  .code-block {
+  .editor-block {
     margin-top: 1em;
     margin-bottom: 1em;
     border-radius: 5px;
@@ -209,40 +176,17 @@
     box-sizing: border-box;
     border: 2px solid var(--color-dark-component-background);
     overflow: auto;
+    height: calc(100vh - 10vh - 45px - 45px);
   }
 
-  :global(body.light-mode) .code-block {
+  :global(body.light-mode) .editor-block {
     border: 2px solid var(--color-light-component-background);
   }
 
-  pre {
-    padding-left: 5px;
-    margin: 0px;
-    font-size: 15px;
-    box-sizing: border-box;
-    overflow: auto;
-  }
-
-  .code-context {
-    position: sticky;
-    left: 0px;
+  .editor-context {
     padding: 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-
-  .line-number {
-    position: sticky;
-    left: 0px;
-    font-size: 15px;
-    border-right: 1px solid var(--color-dark-component-background);
-    text-align: center;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  :global(body.light-mode) .line-number {
-    border-right: 1px solid var(--color-light-component-background);
   }
 </style>
