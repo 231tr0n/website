@@ -70,13 +70,15 @@
 {#if code && langDef && langName}
   <div class="flex-middle">
     <div bind:this={codeElement} class="code-block body">
-      <div class="filename code-context component">
-        <span
-          >{filePath[filePath.length - 1] === "/"
-            ? filePath
-            : filePath + "/"}{fileName}</span
-        >
-      </div>
+      {#if fileName}
+        <div class="filename code-context component">
+          <span
+            >{filePath[filePath.length - 1] === "/"
+              ? filePath
+              : filePath + "/"}{fileName}</span
+          >
+        </div>
+      {/if}
       <div class="code-context component">
         <span>
           <button on:click={copy}>
@@ -167,9 +169,9 @@
         </span>
         <span>{langName}</span>
       </div>
-      <div class="inline-grid">
+      <div class="main-block">
         <div bind:this={lineNumber} class="line-number body" />
-        <div><pre><code>{@html codeHTML}</code></pre></div>
+        <pre><code>{@html codeHTML}</code></pre>
       </div>
       {#if output}
         <div class="code-context component"><span>Output</span></div>
@@ -180,9 +182,9 @@
 {/if}
 
 <style>
-  .inline-grid {
-    display: grid;
-    grid-template-columns: min-content auto;
+  .main-block {
+    display: flex;
+    border-bottom: 1px solid var(--color-dark-component-background);
   }
 
   button {
@@ -207,12 +209,18 @@
     width: 100%;
     max-width: 85vw;
     box-sizing: border-box;
-    border: 2px solid var(--color-dark-component-background);
+    border-top: 2px solid var(--color-dark-component-background);
+    border-left: 2px solid var(--color-dark-component-background);
+    border-right: 2px solid var(--color-dark-component-background);
+    border-bottom: 1px solid var(--color-dark-component-background);
     overflow: auto;
   }
 
   :global(body.light-mode) .code-block {
-    border: 2px solid var(--color-light-component-background);
+    border-top: 2px solid var(--color-light-component-background);
+    border-left: 2px solid var(--color-light-component-background);
+    border-right: 2px solid var(--color-light-component-background);
+    border-bottom: 1px solid var(--color-light-component-background);
   }
 
   pre {
