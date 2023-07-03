@@ -15,6 +15,7 @@
   --color-solarized-blue: #268bd2;
   --color-solarized-cyan: #2aa198;
   --color-solarized-green: #859900;
+  --color-solarized-black: #1a1a1a;
 
   --color-dark-strong-background: var(--color-solarized-base02);
   --color-dark-background: var(--color-solarized-base03);
@@ -31,7 +32,7 @@
   --color-light-background: var(--color-solarized-base2);
   --color-light-foreground: var(--color-solarized-base00);
   --color-light-component-background: var(--color-solarized-base1);
-  --color-light-component-foreground: var(--color-solarized-base03);
+  --color-light-component-foreground: var(--color-solarized-black);
   --color-light-heading: var(--color-solarized-base03);
   --color-light-keyword: var(--color-solarized-magenta);
   --color-light-anchor: var(--color-solarized-red);
