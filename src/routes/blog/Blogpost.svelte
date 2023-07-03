@@ -3,67 +3,95 @@
   export let badges = [];
   export let description = "";
   export let url = "";
-  let visible = false;
-
-  let toggle = () => {
-    visible = !visible;
-  };
 </script>
 
 {#if post && badges && description}
-  <div class="underliner">
-    <div class="flex-middle">
-      <h2>
-        {post}
-      </h2>
-      <button on:click={toggle}
-        ><span class="flex-middle"
-          >{#if visible}▲{:else}▼{/if}</span
-        ></button
-      >
-      <div class="padder" />
-      <a href={url}><button>Open</button></a>
+  <details>
+    <summary>
+      <div class="spacer">
+        <h2>{post}</h2>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-chevron-down component"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+          />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-chevron-up component"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"
+          />
+        </svg>
+        <a href={url}><button>Open</button></a>
+      </div>
+    </summary>
+    <div class="center">
+      {#each badges as badge}
+        <span class="badge">{badge}</span>
+      {/each}
+      <div class="center">
+        {description}
+      </div>
     </div>
-  </div>
-  <div class="accordion-content flex-center">
-    <div class="size-fixer">
-      {#if visible}
-        <div class="center">
-          {#each badges as badge}
-            <span class="badge">{badge}</span>
-          {/each}
-        </div>
-        <div class="flex-center">
-          <div class="justify">
-            {description}
-          </div>
-        </div>
-      {/if}
-    </div>
-  </div>
+  </details>
 {/if}
 
 <style>
-  .padder {
-    padding: 2px;
+  svg {
+    margin-right: 5px;
+    padding: 3px;
+    border-radius: 5px;
   }
 
-  .underliner {
+  details {
+    margin-top: 1em;
+  }
+
+  summary {
+    list-style: none;
     border-bottom: 1px solid var(--color-dark-foreground);
+    margin-bottom: 1em;
   }
 
-  :global(body.light-mode) .underliner {
+  :global(body.light-mode) summary {
     border-bottom: 1px solid var(--color-light-foreground);
   }
 
-  .size-fixer {
-    width: 800px;
-    max-width: 90vw;
+  details > summary svg.bi-chevron-down {
+    display: inline;
   }
 
-  .accordion-content {
-    margin-top: 1em;
-    padding: 5px;
+  details > summary svg.bi-chevron-up {
+    display: none;
+  }
+
+  details[open] > summary svg.bi-chevron-down {
+    display: none;
+  }
+
+  details[open] > summary svg.bi-chevron-up {
+    display: inline;
+  }
+
+  .spacer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   h2 {
@@ -76,11 +104,7 @@
     border: 0px;
   }
 
-  div.accordion-content {
-    margin-bottom: 1em;
-  }
-
-  div.justify {
+  div.center {
     margin-top: 1em;
   }
 </style>

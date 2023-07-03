@@ -13,7 +13,7 @@
 
   let scroller = () => {
     sections[selection.value].scrollIntoView();
-    page.scrollBy(0, -breadcrumb.offsetHeight - 4);
+    page.scrollBy(0, -breadcrumb.offsetHeight - 2);
   };
 
   let updateBreadcrumb = () => {
@@ -43,8 +43,8 @@
     content.style.paddingBottom = `calc(100vh - ${
       document.querySelector("footer").offsetHeight
     }px - ${document.querySelector("header").offsetHeight}px - ${
-      sections[sections.length - 1].offsetHeight
-    }px - ${breadcrumb.offsetHeight}px)`;
+      breadcrumb.offsetHeight
+    }px)`;
   });
 
   onMount(() => {
@@ -59,8 +59,8 @@
     content.style.paddingBottom = `calc(100vh - ${
       document.querySelector("footer").offsetHeight
     }px - ${document.querySelector("header").offsetHeight}px - ${
-      sections[sections.length - 1].offsetHeight
-    }px - ${breadcrumb.offsetHeight}px)`;
+      breadcrumb.offsetHeight
+    }px)`;
   });
 </script>
 
