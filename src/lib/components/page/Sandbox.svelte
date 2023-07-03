@@ -112,7 +112,6 @@
 
   iframe {
     border: 0px;
-    border-radius: 4px;
     overflow: auto;
     width: 100%;
     height: calc(100% - 34px - 38px);
