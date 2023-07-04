@@ -53,8 +53,17 @@
 <style>
   svg {
     margin-right: 5px;
-    padding: 3px;
+    padding: 2px;
     border-radius: 5px;
+    border: 2px solid transparent;
+  }
+
+  svg:hover {
+    border: 2px solid var(--color-dark-anchor);
+  }
+
+  :global(body.light-mode) svg:hover {
+    border: 2px solid var(--color-light-anchor);
   }
 
   details {
