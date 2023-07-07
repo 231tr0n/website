@@ -228,6 +228,9 @@
   <a target="_blank" href="https://en.wikipedia.org/wiki/Linux">
     <img class="logo" alt="Linux" src="/images/linux.avif" />
   </a>
+  <a target="_blank" href="https://vimdoc.sourceforge.net/htmldoc">
+    <img class="logo" alt="Vim" src="/images/vim.avif" />
+  </a>
   <a target="_blank" href="https://www.microsoft.com/en-us/windows">
     <img class="logo" alt="Windows" src="/images/windows.avif" />
   </a><br />

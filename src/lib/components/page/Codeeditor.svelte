@@ -4,15 +4,17 @@
   import solarized_light from "ace-code/src/theme/solarized_light";
   import solarized_dark from "ace-code/src/theme/solarized_dark";
   import vim from "ace-code/src/keyboard/vim";
+  import vscode from "ace-code/src/keyboard/vscode";
+  import beautifier from "ace-code/src/ext/beautify";
   import { lightMode } from "$lib/store.js";
   import "$lib/css/editor.css";
 
   export let langName = "";
-  export let vimMode = false;
   export let mode = "";
   export let readOnly = false;
   export let codeStore = "";
 
+  let vimMode = false;
   let editorDiv = "";
   let editor = "";
   let editorElement = "";
@@ -41,12 +43,27 @@
     }
   };
 
+  let beautify = () => {
+    beautifier.beautify(editor.session);
+  };
+
+  let toggleKeybinds = () => {
+    if (vimMode && editor) {
+      editor.setKeyboardHandler(vscode.handler);
+    } else {
+      editor.setKeyboardHandler(vim.handler);
+    }
+    vimMode = !vimMode;
+  };
+
   onMount(() => {
     editorDiv.id = Math.random().toString(16);
     editor = ace.edit(editorDiv.id);
     editor.setTheme(solarized_dark);
     if (vimMode) {
       editor.setKeyboardHandler(vim.handler);
+    } else {
+      editor.setKeyboardHandler(vscode.handler);
     }
     if (mode) {
       editor.session.setMode(new mode.Mode());
@@ -72,6 +89,11 @@
     };
   });
 </script>
+
+<svelte:head>
+  <link rel="preload" as="image" type="image/avif" href="/images/vim.avif" />
+  <link rel="preload" as="image" type="image/avif" href="/images/vscode.avif" />
+</svelte:head>
 
 {#if mode && langName}
   <div class="flex-middle">
@@ -149,6 +171,28 @@
                 />
               </svg>
             {/if}
+          </button><button on:click={toggleKeybinds}>
+            {#if vimMode}
+              <img class="logo" alt="Vim" src="/images/vim.avif" />
+            {:else}
+              <img class="logo" alt="Vscode" src="/images/vscode.avif" />
+            {/if}
+          </button><button on:click={beautify}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-code-square"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+              />
+              <path
+                d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0zm2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z"
+              />
+            </svg>
           </button><button on:click={execute}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -175,6 +219,11 @@
 {/if}
 
 <style>
+  .logo {
+    width: 16px;
+    height: 16px;
+  }
+
   button {
     padding: 3px;
     display: inline-flex;
