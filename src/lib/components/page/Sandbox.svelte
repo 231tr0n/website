@@ -7,7 +7,7 @@
   let fullscreen = false;
   let iframeElement = "";
   let iframe = "";
-  let subscriber = "";
+  let subscriber = () => {};
 
   let toggleFullscreen = () => {
     if (document.fullscreenElement) {
