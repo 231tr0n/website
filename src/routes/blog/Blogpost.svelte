@@ -1,44 +1,14 @@
 <script>
-  export let post = "";
+  import Accordion from "$lib/components/page/Accordion.svelte";
+
+  export let name = "";
+  export let url = "";
   export let badges = [];
   export let description = "";
-  export let url = "";
 </script>
 
-{#if post && badges && description}
-  <details>
-    <summary>
-      <div class="spacer">
-        <h2>{post}</h2>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          class="bi bi-chevron-down component"
-          viewBox="0 0 16 16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
-          />
-        </svg>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          class="bi bi-chevron-up component"
-          viewBox="0 0 16 16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"
-          />
-        </svg>
-        <a href={url}><button>Open</button></a>
-      </div>
-    </summary>
+{#if name && description}
+  <Accordion {name} {url}>
     <div class="center">
       {#each badges as badge}
         <span class="badge">{badge}</span>
@@ -47,72 +17,10 @@
         {description}
       </div>
     </div>
-  </details>
+  </Accordion>
 {/if}
 
 <style>
-  svg {
-    margin-right: 5px;
-    padding: 2px;
-    border-radius: 5px;
-    border: 2px solid transparent;
-  }
-
-  svg:hover {
-    border: 2px solid var(--color-dark-anchor);
-  }
-
-  :global(body.light-mode) svg:hover {
-    border: 2px solid var(--color-light-anchor);
-  }
-
-  details {
-    margin-top: 1em;
-  }
-
-  summary {
-    list-style: none;
-    border-bottom: 1px solid var(--color-dark-foreground);
-    margin-bottom: 1em;
-  }
-
-  :global(body.light-mode) summary {
-    border-bottom: 1px solid var(--color-light-foreground);
-  }
-
-  details > summary svg.bi-chevron-down {
-    display: inline;
-  }
-
-  details > summary svg.bi-chevron-up {
-    display: none;
-  }
-
-  details[open] > summary svg.bi-chevron-down {
-    display: none;
-  }
-
-  details[open] > summary svg.bi-chevron-up {
-    display: inline;
-  }
-
-  .spacer {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  h2 {
-    width: 100%;
-    border: 0px;
-    margin: 0px;
-  }
-
-  :global(body.light-mode) h2 {
-    border: 0px;
-  }
-
   div.center {
     margin-top: 1em;
   }

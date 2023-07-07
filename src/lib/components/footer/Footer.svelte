@@ -1,46 +1,40 @@
 <svelte:head>
-  <!-- <link -->
-  <!--   rel="preload" -->
-  <!--   as="image" -->
-  <!--   type="image/svg+xml" -->
-  <!--   href="/images/gmail.svg" -->
-  <!--   crossorigin -->
-  <!-- /> -->
-  <!-- <link -->
-  <!--   rel="preload" -->
-  <!--   as="image" -->
-  <!--   type="image/svg+xml" -->
-  <!--   href="/images/github-dark.svg" -->
-  <!--   crossorigin -->
-  <!-- /> -->
-  <!-- <link -->
-  <!--   rel="preload" -->
-  <!--   as="image" -->
-  <!--   type="image/svg+xml" -->
-  <!--   href="/images/github-light.svg" -->
-  <!--   crossorigin -->
-  <!-- /> -->
-  <!-- <link -->
-  <!--   rel="preload" -->
-  <!--   as="image" -->
-  <!--   type="image/svg+xml" -->
-  <!--   href="/images/gitlab.svg" -->
-  <!--   crossorigin -->
-  <!-- /> -->
-  <!-- <link -->
-  <!--   rel="preload" -->
-  <!--   as="image" -->
-  <!--   type="image/svg+xml" -->
-  <!--   href="/images/linkedin.svg" -->
-  <!--   crossorigin -->
-  <!-- /> -->
-  <!-- <link -->
-  <!--   rel="preload" -->
-  <!--   as="image" -->
-  <!--   type="image/svg+xml" -->
-  <!--   href="/images/twitter.svg" -->
-  <!--   crossorigin -->
-  <!-- /> -->
+  <link
+    rel="preload"
+    as="image"
+    type="image/svg+xml"
+    href="/images/gmail.svg"
+  />
+  <link
+    rel="preload"
+    as="image"
+    type="image/svg+xml"
+    href="/images/github-dark.svg"
+  />
+  <link
+    rel="preload"
+    as="image"
+    type="image/svg+xml"
+    href="/images/github-light.svg"
+  />
+  <link
+    rel="preload"
+    as="image"
+    type="image/svg+xml"
+    href="/images/gitlab.svg"
+  />
+  <link
+    rel="preload"
+    as="image"
+    type="image/svg+xml"
+    href="/images/linkedin.svg"
+  />
+  <link
+    rel="preload"
+    as="image"
+    type="image/svg+xml"
+    href="/images/twitter.svg"
+  />
 </svelte:head>
 
 <footer class="flex-middle">

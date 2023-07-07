@@ -1,5 +1,5 @@
 <script>
-  import { lightMode } from "$lib/stores/theme";
+  import { lightMode } from "$lib/store.js";
   let dark = "/images/dark.svg";
   let light = "/images/light.avif";
   let src = dark;
@@ -32,20 +32,13 @@
 </script>
 
 <svelte:head>
-  <!-- <link -->
-  <!--   rel="preload" -->
-  <!--   as="image" -->
-  <!--   type="image/svg+xml" -->
-  <!--   href="/images/dark.svg" -->
-  <!--   crossorigin -->
-  <!-- /> -->
-  <!-- <link -->
-  <!--   rel="preload" -->
-  <!--   as="image" -->
-  <!--   type="image/svg+xml" -->
-  <!--   href="/images/light.avif" -->
-  <!--   crossorigin -->
-  <!-- /> -->
+  <link rel="preload" as="image" type="image/svg+xml" href="/images/dark.svg" />
+  <link
+    rel="preload"
+    as="image"
+    type="image/svg+xml"
+    href="/images/light.avif"
+  />
 </svelte:head>
 
 <button on:click={toggletheme}>

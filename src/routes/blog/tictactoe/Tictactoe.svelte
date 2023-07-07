@@ -1,4 +1,5 @@
 <script>
+  import { error } from "@sveltejs/kit";
   import { onMount } from "svelte";
   import Codehighlighter from "$lib/components/page/Codehighlighter.svelte";
   import Sandbox from "$lib/components/page/Sandbox.svelte";
@@ -22,32 +23,33 @@
       render = true;
     } catch (error) {
       console.log(error);
+      throw error(404, {
+        message: "Failed fetch call.",
+        code: "NOT_FOUND",
+      });
     }
   });
 </script>
 
 <svelte:head>
-  <!-- <link -->
-  <!--   rel="preload" -->
-  <!--   as="document" -->
-  <!--   type="text/html" -->
-  <!--   src="/resources/blog/tictactoe/index.html" -->
-  <!--   crossorigin -->
-  <!-- /> -->
-  <!-- <link -->
-  <!--   rel="preload" -->
-  <!--   as="script" -->
-  <!--   type="text/javascript" -->
-  <!--   src="/resources/blog/tictactoe/index.js" -->
-  <!--   crossorigin -->
-  <!-- /> -->
-  <!-- <link -->
-  <!--   rel="preload" -->
-  <!--   as="style" -->
-  <!--   type="text/css" -->
-  <!--   src="/resources/blog/tictactoe/style.css" -->
-  <!--   crossorigin -->
-  <!-- /> -->
+  <link
+    rel="preload"
+    src="/resources/blog/tictactoe/index.html"
+    as="document"
+    type="text/html"
+  />
+  <link
+    rel="preload"
+    src="/resources/blog/tictactoe/index.js"
+    as="script"
+    type="text/javascript"
+  />
+  <link
+    rel="preload"
+    src="/resources/blog/tictactoe/style.css"
+    as="style"
+    type="text/css"
+  />
 </svelte:head>
 
 <h1>TicTacToe</h1>

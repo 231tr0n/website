@@ -1,10 +1,13 @@
 <script>
-  import { onMount } from "svelte";
+  import { onMount, onDestroy } from "svelte";
   export let title = "";
   export let src = "";
+  export let srcdocStore = "";
 
   let fullscreen = false;
   let iframeElement = "";
+  let iframe = "";
+  let subscriber = "";
 
   let toggleFullscreen = () => {
     if (document.fullscreenElement) {
@@ -19,17 +22,30 @@
   };
 
   onMount(() => {
-    iframeElement.onfullscreenchange = () => {
-      if (document.fullscreenElement) {
-        fullscreen = true;
-      } else {
-        fullscreen = false;
-      }
-    };
+    if (title) {
+      iframeElement.onfullscreenchange = () => {
+        if (document.fullscreenElement) {
+          fullscreen = true;
+        } else {
+          fullscreen = false;
+        }
+      };
+    }
+
+    if (srcdocStore) {
+      subscriber = srcdocStore.subscribe((value) => {
+        iframe.srcdoc = value;
+        iframe.src = iframe.src;
+      });
+    }
+  });
+
+  onDestroy(() => {
+    subscriber();
   });
 </script>
 
-{#if title && src}
+{#if title}
   <div class="flex-middle">
     <div bind:this={iframeElement} class="iframe body">
       <div class="filename iframe-context component">
@@ -69,6 +85,7 @@
         </span><span>sandbox</span>
       </div>
       <iframe
+        bind:this={iframe}
         on:resize={resized}
         {title}
         allowfullscreen

@@ -3,9 +3,9 @@
 
   let blogPosts = [];
 
-  let blogPostCreator = (post, badges, description, url) => {
+  let blogPostCreator = (name, badges, description, url) => {
     return {
-      post,
+      name,
       badges,
       description,
       url,
@@ -17,6 +17,12 @@
       ["javscript", "html", "css", "browser"],
       "Creating TicTacToe game in browser with html, css and javascript.",
       "/blog/tictactoe"
+    ),
+    blogPostCreator(
+      "HTML Playground",
+      ["html", "css", "javascript", "browser"],
+      "A simple playground to play with html, css and javascript.",
+      "/blog/playground"
     )
   );
 </script>

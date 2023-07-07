@@ -5,13 +5,13 @@
 </script>
 
 <svelte:head>
-  <!-- <link -->
-  <!--   rel="preload" -->
-  <!--   as="font" -->
-  <!--   type="font/woff2" -->
-  <!--   href="/fonts/HurmitNerdFontMono-Bold.woff2" -->
-  <!--   crossorigin -->
-  <!-- /> -->
+  <link
+    rel="preload"
+    as="font"
+    type="font/woff2"
+    href="/fonts/HurmitNerdFontMono-Bold.woff2"
+    crossorigin
+  />
   <!-- <link -->
   <!--   rel="preload" -->
   <!--   as="font" -->
@@ -40,20 +40,19 @@
   <!--   href="/fonts/HurmitNerdFontMono-Light.woff2" -->
   <!--   crossorigin -->
   <!-- /> -->
-  <!-- <link -->
-  <!--   rel="preload" -->
-  <!--   as="font" -->
-  <!--   type="font/woff2" -->
-  <!--   href="/fonts/HurmitNerdFontMono-Regular.woff2" -->
-  <!--   crossorigin -->
-  <!-- /> -->
-  <!-- <link -->
-  <!--   rel="preload" -->
-  <!--   as="image" -->
-  <!--   type="image/avif" -->
-  <!--   href="/images/background.avif" -->
-  <!--   crossorigin -->
-  <!-- /> -->
+  <link
+    rel="preload"
+    as="font"
+    type="font/woff2"
+    href="/fonts/HurmitNerdFontMono-Regular.woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    as="image"
+    type="image/avif"
+    href="/images/background.avif"
+  />
 </svelte:head>
 
 <Navbar />

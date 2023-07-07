@@ -4,13 +4,14 @@
   import solarized_light from "ace-code/src/theme/solarized_light";
   import solarized_dark from "ace-code/src/theme/solarized_dark";
   import vim from "ace-code/src/keyboard/vim";
-  import { lightMode } from "$lib/stores/theme";
+  import { lightMode } from "$lib/store.js";
   import "$lib/css/editor.css";
 
   export let langName = "";
   export let vimMode = false;
   export let mode = "";
   export let readOnly = false;
+  export let codeStore = "";
 
   let editorDiv = "";
   let editor = "";
@@ -31,6 +32,12 @@
       document.exitFullscreen();
     } else {
       editorElement.requestFullscreen();
+    }
+  };
+
+  let execute = () => {
+    if (codeStore) {
+      codeStore.set(editor.session.getValue());
     }
   };
 
@@ -142,6 +149,22 @@
                 />
               </svg>
             {/if}
+          </button><button on:click={execute}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-play-circle"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+              />
+              <path
+                d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"
+              />
+            </svg>
           </button>
         </span>
         <span>{langName}</span>
