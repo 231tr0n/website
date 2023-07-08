@@ -91,7 +91,11 @@ body.light-mode h3 {
 
 ul {
   margin: 0px;
-  padding-left: 25px;
+  padding-left: 26px;
+}
+
+ul > li {
+  padding-left: 12px;
 }
 
 pre {

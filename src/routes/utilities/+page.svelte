@@ -1,6 +1,6 @@
 <script>
   import Page from "$lib/components/page/Page.svelte";
-  import Playground from "./Playground.svelte";
+  import Utility from "./Utility.svelte";
 </script>
 
-<Page blog={Playground} />
+<Page blog={Utility} />

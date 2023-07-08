@@ -1,4 +1,11 @@
 <svelte:head>
+  <link
+    rel="preload"
+    as="image"
+    type="image/avif"
+    href="/images/zeltron.avif"
+  />
+  <link rel="preload" as="image" type="image/avif" href="/images/logo.avif" />
   <link rel="preload" as="image" type="image/avif" href="/images/go.avif" />
   <link rel="preload" as="image" type="image/avif" href="/images/python.avif" />
   <link rel="preload" as="image" type="image/avif" href="/images/nodejs.avif" />
@@ -72,6 +79,10 @@
 <h1>Home</h1>
 
 <h2>About</h2>
+<div class="center">
+  <img src="/images/logo.avif" alt="Logo" class="zeltron" />
+  <img src="/images/zeltron.avif" alt="Logo" class="zeltron" />
+</div>
 <ul>
   <li>
     Hello, my name is <span class="highlightkeyword">Srikar</span>
@@ -91,6 +102,7 @@
   <li>Gaming</li>
   <li>Listening to music</li>
   <li>Watching movies and anime</li>
+  <li>Solving rubik's cubes</li>
 </ol>
 
 <h2>Projects</h2>
@@ -296,6 +308,13 @@
 </div>
 
 <style>
+  .zeltron {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 1em;
+  }
+
   .logo {
     padding: 2px;
     height: 40px;

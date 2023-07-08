@@ -33,12 +33,7 @@
 
 <svelte:head>
   <link rel="preload" as="image" type="image/svg+xml" href="/images/dark.svg" />
-  <link
-    rel="preload"
-    as="image"
-    type="image/svg+xml"
-    href="/images/light.avif"
-  />
+  <link rel="preload" as="image" type="image/avif" href="/images/light.avif" />
 </svelte:head>
 
 <button on:click={toggletheme}>

@@ -4,21 +4,14 @@
 
 <header>
   <span>
-    <a href="https://231tr0n.github.io" target="_blank">
-      <button><strong>231tr0n</strong></button>
-    </a>
     <a href="/"><button>Home</button></a>
     <a href="/blog"><button>Blog</button></a>
+    <a href="/utilities"><button>Utilities</button></a>
   </span>
   <Theme />
 </header>
 
 <style>
-  strong {
-    font-family: HurmitNerdFontMono-Bold;
-    font-weight: bolder;
-  }
-
   header {
     position: fixed;
     top: 0px;
