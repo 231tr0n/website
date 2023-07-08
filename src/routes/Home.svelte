@@ -94,16 +94,16 @@
 </ul>
 
 <h2>Hobbies</h2>
-<ol>
-  <li>Badminton</li>
-  <li>Programming</li>
-  <li>Cycling</li>
-  <li>Chess</li>
-  <li>Gaming</li>
-  <li>Listening to music</li>
-  <li>Watching movies and anime</li>
-  <li>Solving rubik's cubes</li>
-</ol>
+<div class="center">
+  <div class="badge">Badminton</div>
+  <div class="badge">Programming</div>
+  <div class="badge">Cycling</div>
+  <div class="badge">Chess</div>
+  <div class="badge">Gaming</div>
+  <div class="badge">Listening to music</div>
+  <div class="badge">Watching movies and anime</div>
+  <div class="badge">Solving rubik's cubes</div>
+</div>
 
 <h2>Projects</h2>
 <ol>
