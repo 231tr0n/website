@@ -87,6 +87,10 @@
         fullscreen = false;
       }
     };
+
+    document.querySelectorAll("textarea.ace_text-input").forEach((value) => {
+      value.setAttribute("aria-label", "Editor");
+    });
   });
 </script>
 
@@ -105,7 +109,7 @@
       </div>
       <div class="editor-context component">
         <span>
-          <button on:click={copy}>
+          <button on:click={copy} aria-label="Copy">
             {#if !copied}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -143,7 +147,10 @@
                 />
               </svg>
             {/if}
-          </button><button on:click={toggleFullscreen}>
+          </button><button
+            on:click={toggleFullscreen}
+            aria-label="Toggle fullscreen"
+          >
             {#if !fullscreen}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -171,13 +178,16 @@
                 />
               </svg>
             {/if}
-          </button><button on:click={toggleKeybinds}>
+          </button><button
+            on:click={toggleKeybinds}
+            aria-label="Toggle keybindings"
+          >
             {#if vimMode}
               <img class="logo" alt="Vim" src="/images/vim.avif" />
             {:else}
               <img class="logo" alt="Vscode" src="/images/vscode.avif" />
             {/if}
-          </button><button on:click={beautify}>
+          </button><button on:click={beautify} aria-label="Format">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -193,7 +203,7 @@
                 d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0zm2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z"
               />
             </svg>
-          </button><button on:click={execute}>
+          </button><button on:click={execute} aria-label="Run">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"

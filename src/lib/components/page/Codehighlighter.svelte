@@ -82,7 +82,7 @@
       {/if}
       <div class="code-context component">
         <span>
-          <button on:click={copy}>
+          <button on:click={copy} aria-label="Copy">
             {#if !copied}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -120,7 +120,10 @@
                 />
               </svg>
             {/if}
-          </button><button on:click={toggleFullscreen}>
+          </button><button
+            on:click={toggleFullscreen}
+            aria-label="Toggle fullscreen"
+          >
             {#if !fullscreen}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -149,7 +152,7 @@
               </svg>
             {/if}
           </button>{#if fileName}<a href="/favicon.ico" bind:this={anchor}
-              ><button>
+              ><button aria-label="Download">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
