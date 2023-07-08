@@ -1,4 +1,4 @@
-import { readable, writable } from "svelte/store";
+import { writable } from 'svelte/store';
 
 export const lightMode = writable(false);
-export const blogPlayground = writable("");
+export const blogPlayground = writable('');

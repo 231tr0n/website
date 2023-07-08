@@ -1,5 +1,4 @@
 <script>
-  import { error } from "@sveltejs/kit";
   import { onMount } from "svelte";
   import Codehighlighter from "$lib/components/page/Codehighlighter.svelte";
   import Sandbox from "$lib/components/page/Sandbox.svelte";
@@ -23,10 +22,6 @@
       render = true;
     } catch (error) {
       console.log(error);
-      throw error(404, {
-        message: "Failed fetch call.",
-        code: "NOT_FOUND",
-      });
     }
   });
 </script>

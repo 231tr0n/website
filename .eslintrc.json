@@ -17,7 +17,7 @@
   "rules": {
     "indent": [
       "error",
-      "tab"
+      2
     ],
     "no-console": [
       "off"
@@ -85,6 +85,9 @@
     ],
     "no-lonely-if": [
       "off"
+    ],
+    "import/no-unresolved": [
+      "warn"
     ]
   }
 }
