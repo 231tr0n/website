@@ -1,6 +1,7 @@
 <script>
   export let name = "";
   export let url = "";
+  export let external = "";
 </script>
 
 {#if name}
@@ -35,7 +36,11 @@
           />
         </svg>
         {#if url}
-          <a href={url}><button>Open</button></a>
+          {#if external}
+            <a target="_blank" href={url}><button>Open</button></a>
+          {:else}
+            <a href={url}><button>Open</button></a>
+          {/if}
         {/if}
       </div>
     </summary>
