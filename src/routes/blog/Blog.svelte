@@ -13,10 +13,10 @@
   };
   blogPosts.push(
     blogPostCreator(
-      "TicTacToe",
-      ["javascript", "html", "css", "browser"],
-      "Creating TicTacToe game in browser with html, css and javascript.",
-      "/blog/tictactoe"
+      "Me",
+      ["introduction", "about", "me"],
+      "Introduction of who I am.",
+      "/"
     )
   );
 </script>

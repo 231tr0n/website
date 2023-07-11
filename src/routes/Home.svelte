@@ -91,6 +91,10 @@
   <li>I learn web development and security.</li>
   <li>I enjoy programming in go, python and javascript.</li>
   <li>I am a linux user who enjoys hacking it to the core.</li>
+  <li>
+    Ex team lead of <a target="_blank" href="https://bi0s.in"> Bi0s </a>
+    club's pentesting category.
+  </li>
 </ul>
 
 <h2>Hobbies</h2>
@@ -105,83 +109,22 @@
   <div class="badge">Solving rubik's cubes</div>
 </div>
 
-<h2>Projects</h2>
+<h2>CVEs</h2>
 <ol>
   <li>
-    <a target="_blank" href="https://github.com/231tr0n/nodejs-proxy"
-      >Proxy Server in Nodejs</a
-    >
-  </li>
-  <li>
-    <a target="_blank" href="https://github.com/231tr0n/vault"
-      >A simple password vault</a
-    >
-  </li>
-  <li>
-    <a target="_blank" href="https://github.com/231tr0n/crypto-project"
-      >Cryptography based vulnerabilities</a
-    >
-  </li>
-  <li>
-    <a target="_blank" href="https://github.com/231tr0n/pentest-bot"
-      >Discord Bot</a
-    >
-  </li>
-  <li>
-    <a target="_blank" href="https://231tr0n.github.io">Personal Website</a>
-  </li>
-  <li>
-    <a target="_blank" href="https://github.com/231tr0n/config">Dotfiles</a>
-  </li>
-  <li>
-    <a target="_blank" href="https://github.com/231tr0n/custom-go-router"
-      >Custom HTTP Router</a
-    >
-  </li>
-  <li>
     <a
-      target="_blank"
-      href="https://github.com/231tr0n/reinforcement-learning-for-snake-game"
-      >Snake Game in Python using Q-Learning</a
-    >
-  </li>
-  <li>
-    <a
-      target="_blank"
-      href="https://github.com/231tr0n/reinforcement-learning-for-pingpong"
-      >Ping Pong Game using Q-Learning</a
-    >
-  </li>
-  <li>
-    <a target="_blank" href="https://github.com/231tr0n/fyp"
-      >Chatbot with Indian Sign Language Recognition System</a
-    >
-  </li>
-  <li>
-    <a
-      target="_blank"
-      href="https://github.com/231tr0n/hamiltonian-path-in-a-graph"
-      >Finding Hamiltonian Path in a Graph</a
-    >
-  </li>
-</ol>
-
-<h2>Achievements</h2>
-<ol>
-  <li>
-    Ex team lead of <a target="_blank" href="https://bi0s.in"> Bi0s </a>
-    club's pentesting category.
-  </li>
-  <li>
-    Found a <a
       target="_blank"
       href="https://huntr.dev/bounties/001d1c29-805a-4035-93bb-71a0e81da3e5"
     >
       CVE-2022-0764
-    </a> in Strapi CMS.
+    </a>
   </li>
+</ol>
+
+<h2>Publications</h2>
+<ol>
   <li>
-    Published a paper on <a
+    <a
       target="_blank"
       href="https://link.springer.com/chapter/10.1007/978-981-19-6088-8_32"
     >

@@ -13,9 +13,9 @@
 
   onMount(async () => {
     try {
-      script = await fetch("/resources/blog/tictactoe/index.js");
-      css = await fetch("/resources/blog/tictactoe/style.css");
-      html = await fetch("/resources/blog/tictactoe/index.html");
+      script = await fetch("/resources/snippets/tictactoe/index.js");
+      css = await fetch("/resources/snippets/tictactoe/style.css");
+      html = await fetch("/resources/snippets/tictactoe/index.html");
       script = await script.text();
       css = await css.text();
       html = await html.text();
@@ -29,19 +29,19 @@
 <svelte:head>
   <link
     rel="preload"
-    src="/resources/blog/tictactoe/index.html"
+    src="/resources/snippets/tictactoe/index.html"
     as="document"
     type="text/html"
   />
   <link
     rel="preload"
-    src="/resources/blog/tictactoe/index.js"
+    src="/resources/snippets/tictactoe/index.js"
     as="script"
     type="text/javascript"
   />
   <link
     rel="preload"
-    src="/resources/blog/tictactoe/style.css"
+    src="/resources/snippets/tictactoe/style.css"
     as="style"
     type="text/css"
   />
@@ -73,5 +73,5 @@
 
 <h2>Output</h2>
 {#if render}
-  <Sandbox title="tic-tac-toe" src="/resources/blog/tictactoe/index.html" />
+  <Sandbox title="tic-tac-toe" src="/resources/snippets/tictactoe/index.html" />
 {/if}
