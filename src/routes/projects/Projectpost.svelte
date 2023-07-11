@@ -5,10 +5,12 @@
   export let url = "";
   export let badges = [];
   export let description = "";
+
+  let external = true;
 </script>
 
 {#if name && description}
-  <Accordion {name} {url}>
+  <Accordion {name} {url} {external}>
     <div class="center">
       {#each badges as badge}
         <span class="badge">{badge}</span>
