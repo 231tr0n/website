@@ -78,11 +78,12 @@
 
 <h1>Home</h1>
 
-<h2>About</h2>
 <div class="center">
   <img src="/images/logo.avif" alt="Logo" class="zeltron" />
   <img src="/images/zeltron.avif" alt="Logo" class="zeltron" />
 </div>
+
+<h2>About</h2>
 <ul>
   <li>
     Hello, my name is <span class="highlightkeyword">Srikar</span>
