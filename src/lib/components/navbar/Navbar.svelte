@@ -29,7 +29,7 @@
     <a href="/snippets"><button>Snippets</button></a>
     <a href="/utilities"><button>Utilities</button></a>
   </div>
-  <button on:click={toggleDiv} class="toggler">
+  <button on:click={toggleDiv} class="toggler" aria-label="Menu">
     {#if !toggled}
       <svg
         xmlns="http://www.w3.org/2000/svg"

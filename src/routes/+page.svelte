@@ -3,4 +3,6 @@
   import Home from "./Home.svelte";
 </script>
 
-<Page blog={Home} />
+<Page scrollspy="true">
+  <svelte:component this={Home} />
+</Page>

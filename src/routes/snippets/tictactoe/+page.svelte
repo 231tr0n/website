@@ -3,4 +3,6 @@
   import Tictactoe from "./Tictactoe.svelte";
 </script>
 
-<Page blog={Tictactoe} />
+<Page scrollspy="true">
+  <svelte:component this={Tictactoe} />
+</Page>

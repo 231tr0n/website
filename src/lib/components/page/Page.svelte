@@ -2,7 +2,7 @@
   import { onMount, afterUpdate } from "svelte";
   import "$lib/css/page.css";
 
-  export let blog;
+  export let scrollspy = false;
 
   let name = "";
   let sections = [];
@@ -10,75 +10,83 @@
   let selection = null;
   let breadcrumb = null;
   let content = null;
+  let scroller = () => {};
+  let updateBreadcrumb = () => {};
 
-  let scroller = () => {
-    sections[selection.value].scrollIntoView();
-    page.scrollBy(0, -breadcrumb.offsetHeight - 2);
-  };
+  if (scrollspy) {
+    scroller = () => {
+      sections[selection.value].scrollIntoView();
+      page.scrollBy(0, -breadcrumb.offsetHeight - 2);
+    };
 
-  let updateBreadcrumb = () => {
-    let prev = null;
-    for (const [index, section] of sections.entries()) {
-      if (
-        breadcrumb.offsetTop + breadcrumb.offsetHeight + 5 <
-        section.offsetTop
-      ) {
-        if (prev) {
-          selection.value = index - 1;
+    updateBreadcrumb = () => {
+      let prev = null;
+      for (const [index, section] of sections.entries()) {
+        if (
+          breadcrumb.offsetTop + breadcrumb.offsetHeight + 5 <
+          section.offsetTop
+        ) {
+          if (prev) {
+            selection.value = index - 1;
+          } else {
+            selection.value = index;
+          }
+          break;
         } else {
           selection.value = index;
         }
-        break;
-      } else {
-        selection.value = index;
+        prev = section;
       }
-      prev = section;
-    }
-  };
+    };
 
-  afterUpdate(() => {
-    sections = document.querySelectorAll("div.page div.content h2");
-    sections = Array.from(sections);
-    sections.unshift(name);
-    content.style.paddingBottom = `calc(100vh - ${
-      document.querySelector("footer").offsetHeight
-    }px - ${document.querySelector("header").offsetHeight}px - ${
-      breadcrumb.offsetHeight
-    }px)`;
-  });
+    afterUpdate(() => {
+      sections = document.querySelectorAll("div.page div.content h2");
+      sections = Array.from(sections);
+      sections.unshift(name);
+    });
 
-  onMount(() => {
-    content = document.querySelector("div.page div.content");
-    name = document.querySelector("div.page div.content h1");
-    sections = document.querySelectorAll("div.page div.content h2");
-    sections = Array.from(sections);
-    sections.unshift(name);
-    page = document.querySelector("div.page");
-    breadcrumb = document.querySelector("div.page div.content h4");
-    selection = document.querySelector("div.page div.content h4 select");
-    content.style.paddingBottom = `calc(100vh - ${
-      document.querySelector("footer").offsetHeight
-    }px - ${document.querySelector("header").offsetHeight}px - ${
-      breadcrumb.offsetHeight
-    }px)`;
-  });
+    onMount(() => {
+      content = document.querySelector("div.page div.content");
+      name = document.querySelector("div.page div.content h1");
+      sections = document.querySelectorAll("div.page div.content h2");
+      sections = Array.from(sections);
+      sections.unshift(name);
+      page = document.querySelector("div.page");
+      breadcrumb = document.querySelector("div.page div.content h4");
+      selection = document.querySelector("div.page div.content h4 select");
+      content.style.paddingBottom = `calc(100vh - ${
+        document.querySelector("footer").offsetHeight
+      }px - ${document.querySelector("header").offsetHeight}px - ${
+        breadcrumb.offsetHeight
+      }px)`;
+    });
+  }
 </script>
 
-<div class="page flex-center" on:scroll={updateBreadcrumb}>
-  <div class="content justify">
-    <h4 class="component center flex-middle">
-      <select class="anchor body" on:change={scroller}>
-        {#each sections as section, index}
-          <option value={index}>{section.innerText}</option>
-        {:else}
-          <option value="" />
-        {/each}
-      </select>
-    </h4>
-    <svelte:component this={blog} />
+{#if scrollspy}
+  <div class="page flex-center" on:scroll={updateBreadcrumb}>
+    <div class="content justify">
+      <h4 class="component center flex-middle">
+        <select class="anchor body" on:change={scroller}>
+          {#each sections as section, index}
+            <option value={index}>{section.innerText}</option>
+          {:else}
+            <option value="" />
+          {/each}
+        </select>
+      </h4>
+      <slot />
+    </div>
+    <div class="body border" />
   </div>
-  <div class="body border" />
-</div>
+{:else}
+  <div class="page flex-center">
+    <div class="content justify">
+      <slot />
+    </div>
+    <div class="body border" />
+  </div>
+{/if}
 
 <style>
   .page {
@@ -94,6 +102,7 @@
     z-index: 5;
     margin: 0px;
     padding: 0px;
+    padding-bottom: 100px;
     max-width: 85vw;
     width: 900px;
     height: max-content;

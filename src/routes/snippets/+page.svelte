@@ -3,4 +3,6 @@
   import Snippet from "./Snippet.svelte";
 </script>
 
-<Page blog={Snippet} />
+<Page>
+  <svelte:component this={Snippet} />
+</Page>

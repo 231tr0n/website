@@ -3,4 +3,6 @@
   import Project from "./Project.svelte";
 </script>
 
-<Page blog={Project} />
+<Page>
+  <svelte:component this={Project} />
+</Page>

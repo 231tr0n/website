@@ -3,4 +3,6 @@
   import Blog from "./Blog.svelte";
 </script>
 
-<Page blog={Blog} />
+<Page>
+  <svelte:component this={Blog} />
+</Page>

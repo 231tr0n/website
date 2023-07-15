@@ -3,4 +3,6 @@
   import Playground from "./HTMLplayground.svelte";
 </script>
 
-<Page blog={Playground} />
+<Page scrollspy="true">
+  <svelte:component this={Playground} />
+</Page>

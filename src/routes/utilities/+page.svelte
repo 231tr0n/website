@@ -3,4 +3,6 @@
   import Utility from "./Utility.svelte";
 </script>
 
-<Page blog={Utility} />
+<Page>
+  <svelte:component this={Utility} />
+</Page>
