@@ -253,7 +253,7 @@
 
 <style>
   .zeltron {
-    height: 100px;
+    height: auto;
     width: 100px;
     border-radius: 50%;
     margin-bottom: 1em;
