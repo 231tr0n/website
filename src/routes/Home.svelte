@@ -130,7 +130,7 @@
       href="https://link.springer.com/chapter/10.1007/978-981-19-6088-8_32"
     >
       Robust and Scalable Network Monitoring System using Apache Spark</a
-    >.
+    >
   </li>
 </ol>
 

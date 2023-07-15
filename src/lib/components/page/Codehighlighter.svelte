@@ -250,6 +250,7 @@
   }
 
   .line-number {
+    word-break: normal;
     position: sticky;
     left: 0px;
     font-size: 15px;

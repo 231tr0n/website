@@ -1,29 +1,14 @@
 <script>
-  import { onMount } from "svelte";
   import Codehighlighter from "$lib/components/page/Codehighlighter.svelte";
   import Sandbox from "$lib/components/page/Sandbox.svelte";
   import highlightJs from "highlight.js/lib/languages/javascript";
   import highlightCss from "highlight.js/lib/languages/css";
   import highlightXml from "highlight.js/lib/languages/xml";
 
-  let script = null;
-  let css = null;
-  let html = null;
-  let render = false;
-
-  onMount(async () => {
-    try {
-      script = await fetch("/resources/snippets/tictactoe/index.js");
-      css = await fetch("/resources/snippets/tictactoe/style.css");
-      html = await fetch("/resources/snippets/tictactoe/index.html");
-      script = await script.text();
-      css = await css.text();
-      html = await html.text();
-      render = true;
-    } catch (error) {
-      console.log(error);
-    }
-  });
+  let fetch_url = async (url) => {
+    let data = await fetch(url);
+    return await data.text();
+  };
 </script>
 
 <svelte:head>
@@ -50,28 +35,36 @@
 <h1>TicTacToe</h1>
 
 <h2>Source Code</h2>
-{#if render}
+{#await fetch_url("/resources/snippets/tictactoe/index.js") then res}
   <Codehighlighter
-    code={script}
+    code={res}
     langDef={highlightJs}
     langName={"javascript"}
     fileName={"index.js"}
   />
+{:catch error}
+  <div class="error">{error}</div>
+{/await}
+{#await fetch_url("/resources/snippets/tictactoe/style.css") then res}
   <Codehighlighter
-    code={css}
+    code={res}
     langDef={highlightCss}
     langName={"css"}
     fileName={"style.css"}
   />
+{:catch error}
+  <div class="error">{error}</div>
+{/await}
+{#await fetch_url("/resources/snippets/tictactoe/index.html") then res}
   <Codehighlighter
-    code={html}
+    code={res}
     langDef={highlightXml}
     langName={"html"}
     fileName={"index.html"}
   />
-{/if}
+{:catch error}
+  <div class="error">{error}</div>
+{/await}
 
 <h2>Output</h2>
-{#if render}
-  <Sandbox title="tic-tac-toe" src="/resources/snippets/tictactoe/index.html" />
-{/if}
+<Sandbox title="tic-tac-toe" src="/resources/snippets/tictactoe/index.html" />
