@@ -9,6 +9,7 @@
   export let filePath = ".";
   export let fileName = "";
   export let output = "";
+
   let codeHTML = "";
   let codeElement = "";
   let fullscreen = false;
