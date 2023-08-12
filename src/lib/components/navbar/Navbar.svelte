@@ -72,7 +72,7 @@
     display: none;
     flex-direction: column;
     padding: 10px;
-    overflow: scroll;
+    overflow: auto;
   }
 
   strong {
