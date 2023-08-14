@@ -256,7 +256,7 @@
     left: 0px;
     font-size: 15px;
     border-right: 1px solid var(--color-dark-component-background);
-    text-align: center;
+    text-align: right;
     padding-left: 10px;
     padding-right: 10px;
   }
