@@ -35,6 +35,7 @@
     } else {
       editorElement.requestFullscreen();
     }
+    editor.resize();
   };
 
   let execute = () => {
