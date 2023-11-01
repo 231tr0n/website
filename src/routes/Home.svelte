@@ -229,7 +229,7 @@
     <img class="logo" alt="Vscode" src="/images/vscode.avif" />
   </a>
 </div>
-<h3>GUIs for Xserver</h3>
+<h3>Desktop Environments and Window Managers</h3>
 <div class="center">
   <a target="_blank" href="https://i3wm.org">
     <img class="logo" alt="i3" src="/images/i3.avif" />
@@ -241,7 +241,10 @@
     <img class="logo" alt="Bspwm" src="/images/bspwm.avif" />
   </a>
   <a target="_blank" href="https://github.com/swaywm/sway">
-    <img class="logo" alt="Bspwm" src="/images/sway.svg" />
+    <img class="logo" alt="Sway" src="/images/sway.svg" />
+  </a>
+  <a target="_blank" href="https://www.gnome.org">
+    <img class="logo" alt="Gnome" src="/images/gnome.svg" />
   </a>
 </div>
 <h3>Shells</h3>
