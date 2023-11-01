@@ -240,6 +240,9 @@
   <a target="_blank" href="https://github.com/baskerville/bspwm">
     <img class="logo" alt="Bspwm" src="/images/bspwm.avif" />
   </a>
+  <a target="_blank" href="https://github.com/swaywm/sway">
+    <img class="logo" alt="Bspwm" src="/images/sway.svg" />
+  </a>
 </div>
 <h3>Shells</h3>
 <div class="center">
