@@ -1,5 +1,6 @@
 <script>
   import { lightMode } from "$lib/store.js";
+  import { browser } from "$app/environment";
   let dark = "/images/dark.svg";
   let light = "/images/light.avif";
   let src = dark;
@@ -7,10 +8,12 @@
   let toggletheme = () => {
     window.document.body.classList.toggle("light-mode");
     src = window.document.body.classList.contains("light-mode") ? light : dark;
-    localStorage.setItem(
-      "theme",
-      window.document.body.classList.contains("light-mode") ? "light" : "dark"
-    );
+    if (browser) {
+      localStorage.setItem(
+        "theme",
+        window.document.body.classList.contains("light-mode") ? "light" : "dark"
+      );
+    }
     if (window.document.body.classList.contains("light-mode")) {
       lightMode.set(true);
     } else {
@@ -18,7 +21,10 @@
     }
   };
 
-  let theme = localStorage.getItem("theme");
+  let theme = "dark";
+  if (browser) {
+    theme = localStorage.getItem("theme");
+  }
   if (theme) {
     if (theme == "light") {
       lightMode.set(true);
@@ -27,7 +33,9 @@
       lightMode.set(false);
     }
   } else {
-    localStorage.setItem("theme", "dark");
+    if (browser) {
+      localStorage.setItem("theme", "dark");
+    }
   }
 </script>
 
