@@ -22,7 +22,7 @@
   },
   "type": "module",
   "dependencies": {
-    "ace-code": "^1.32.2",
+    "ace-code": "^1.32.3",
     "highlight.js": "^11.9.0"
   }
 }
