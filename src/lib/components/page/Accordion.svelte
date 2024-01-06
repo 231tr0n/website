@@ -74,6 +74,15 @@
     margin-bottom: 1em;
   }
 
+  a > button {
+    padding: 1px;
+    font-size: 14px;
+  }
+
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+
   :global(body.light-mode) summary {
     border-bottom: 1px solid var(--color-light-foreground);
   }
