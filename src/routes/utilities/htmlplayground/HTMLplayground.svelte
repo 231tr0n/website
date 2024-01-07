@@ -1,8 +1,8 @@
 <script>
-	import Codeeditor from '$lib/components/page/Codeeditor.svelte';
-	import Sandbox from '$lib/components/page/Sandbox.svelte';
-	import htmlMode from 'ace-code/src/mode/html';
-	import { blogPlayground } from '$lib/store.js';
+  import Codeeditor from '$lib/components/page/Codeeditor.svelte';
+  import Sandbox from '$lib/components/page/Sandbox.svelte';
+  import htmlMode from 'ace-code/src/mode/html';
+  import { blogPlayground } from '$lib/store.js';
 </script>
 
 <h1>HTML Playground</h1>
