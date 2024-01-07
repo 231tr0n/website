@@ -2,8 +2,8 @@
 	import Projectpost from './Projectpost.svelte';
 
 	let fetch_url_data = async (url) => {
-		let temp = await fetch(url);
-		return await temp.json();
+	  let temp = await fetch(url);
+	  return await temp.json();
 	};
 </script>
 

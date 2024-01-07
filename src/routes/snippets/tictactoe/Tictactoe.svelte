@@ -6,8 +6,8 @@
 	import highlightXml from 'highlight.js/lib/languages/xml';
 
 	let fetch_url = async (url) => {
-		let data = await fetch(url);
-		return await data.text();
+	  let data = await fetch(url);
+	  return await data.text();
 	};
 </script>
 

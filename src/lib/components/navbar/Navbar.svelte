@@ -7,17 +7,17 @@
 	let toggleDiv = () => {};
 
 	onMount(() => {
-		div.style.display = 'none';
-		toggled = false;
-		toggleDiv = () => {
-			if (div.style.display === 'none') {
-				div.style.display = 'flex';
-				toggled = true;
-			} else {
-				div.style.display = 'none';
-				toggled = false;
-			}
-		};
+	  div.style.display = 'none';
+	  toggled = false;
+	  toggleDiv = () => {
+	    if (div.style.display === 'none') {
+	      div.style.display = 'flex';
+	      toggled = true;
+	    } else {
+	      div.style.display = 'none';
+	      toggled = false;
+	    }
+	  };
 	});
 </script>
 

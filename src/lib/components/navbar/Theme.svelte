@@ -6,36 +6,36 @@
 	let src = dark;
 
 	let toggletheme = () => {
-		window.document.body.classList.toggle('light-mode');
-		src = window.document.body.classList.contains('light-mode') ? light : dark;
-		if (browser) {
-			localStorage.setItem(
-				'theme',
-				window.document.body.classList.contains('light-mode') ? 'light' : 'dark'
-			);
-		}
-		if (window.document.body.classList.contains('light-mode')) {
-			lightMode.set(true);
-		} else {
-			lightMode.set(false);
-		}
+	  window.document.body.classList.toggle('light-mode');
+	  src = window.document.body.classList.contains('light-mode') ? light : dark;
+	  if (browser) {
+	    localStorage.setItem(
+	      'theme',
+	      window.document.body.classList.contains('light-mode') ? 'light' : 'dark'
+	    );
+	  }
+	  if (window.document.body.classList.contains('light-mode')) {
+	    lightMode.set(true);
+	  } else {
+	    lightMode.set(false);
+	  }
 	};
 
 	let theme = 'dark';
 	if (browser) {
-		theme = localStorage.getItem('theme');
+	  theme = localStorage.getItem('theme');
 	}
 	if (theme) {
-		if (theme == 'light') {
-			lightMode.set(true);
-			toggletheme();
-		} else {
-			lightMode.set(false);
-		}
+	  if (theme == 'light') {
+	    lightMode.set(true);
+	    toggletheme();
+	  } else {
+	    lightMode.set(false);
+	  }
 	} else {
-		if (browser) {
-			localStorage.setItem('theme', 'dark');
-		}
+	  if (browser) {
+	    localStorage.setItem('theme', 'dark');
+	  }
 	}
 </script>
 
