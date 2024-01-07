@@ -14,47 +14,47 @@
 	let updateBreadcrumb = () => {};
 
 	if (scrollspy) {
-	  scroller = () => {
-	    sections[selection.value].scrollIntoView();
-	    page.scrollBy(0, -breadcrumb.offsetHeight - 2);
-	  };
+		scroller = () => {
+			sections[selection.value].scrollIntoView();
+			page.scrollBy(0, -breadcrumb.offsetHeight - 2);
+		};
 
-	  updateBreadcrumb = () => {
-	    let prev = null;
-	    for (const [index, section] of sections.entries()) {
-	      if (breadcrumb.offsetTop + breadcrumb.offsetHeight + 5 < section.offsetTop) {
-	        if (prev) {
-	          selection.value = index - 1;
-	        } else {
-	          selection.value = index;
-	        }
-	        break;
-	      } else {
-	        selection.value = index;
-	      }
-	      prev = section;
-	    }
-	  };
+		updateBreadcrumb = () => {
+			let prev = null;
+			for (const [index, section] of sections.entries()) {
+				if (breadcrumb.offsetTop + breadcrumb.offsetHeight + 5 < section.offsetTop) {
+					if (prev) {
+						selection.value = index - 1;
+					} else {
+						selection.value = index;
+					}
+					break;
+				} else {
+					selection.value = index;
+				}
+				prev = section;
+			}
+		};
 
-	  afterUpdate(() => {
-	    sections = document.querySelectorAll('div.page div.content h2');
-	    sections = Array.from(sections);
-	    sections.unshift(name);
-	  });
+		afterUpdate(() => {
+			sections = document.querySelectorAll('div.page div.content h2');
+			sections = Array.from(sections);
+			sections.unshift(name);
+		});
 
-	  onMount(() => {
-	    content = document.querySelector('div.page div.content');
-	    name = document.querySelector('div.page div.content h1');
-	    sections = document.querySelectorAll('div.page div.content h2');
-	    sections = Array.from(sections);
-	    sections.unshift(name);
-	    page = document.querySelector('div.page');
-	    breadcrumb = document.querySelector('div.page div.content h4');
-	    selection = document.querySelector('div.page div.content h4 select');
-	    content.style.paddingBottom = `calc(100vh - ${
-	      document.querySelector('footer').offsetHeight
-	    }px - ${document.querySelector('header').offsetHeight}px - ${breadcrumb.offsetHeight}px)`;
-	  });
+		onMount(() => {
+			content = document.querySelector('div.page div.content');
+			name = document.querySelector('div.page div.content h1');
+			sections = document.querySelectorAll('div.page div.content h2');
+			sections = Array.from(sections);
+			sections.unshift(name);
+			page = document.querySelector('div.page');
+			breadcrumb = document.querySelector('div.page div.content h4');
+			selection = document.querySelector('div.page div.content h4 select');
+			content.style.paddingBottom = `calc(100vh - ${
+				document.querySelector('footer').offsetHeight
+			}px - ${document.querySelector('header').offsetHeight}px - ${breadcrumb.offsetHeight}px)`;
+		});
 	}
 </script>
 

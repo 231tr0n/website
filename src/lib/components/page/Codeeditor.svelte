@@ -22,76 +22,76 @@
 	let fullscreen = false;
 
 	let copy = () => {
-	  navigator.clipboard.writeText(editor.session.getValue());
-	  copied = true;
-	  setTimeout(() => {
-	    copied = false;
-	  }, 2000);
+		navigator.clipboard.writeText(editor.session.getValue());
+		copied = true;
+		setTimeout(() => {
+			copied = false;
+		}, 2000);
 	};
 
 	let toggleFullscreen = () => {
-	  if (document.fullscreenElement) {
-	    document.exitFullscreen();
-	  } else {
-	    editorElement.requestFullscreen();
-	  }
-	  editor.resize();
+		if (document.fullscreenElement) {
+			document.exitFullscreen();
+		} else {
+			editorElement.requestFullscreen();
+		}
+		editor.resize();
 	};
 
 	let execute = () => {
-	  if (codeStore) {
-	    codeStore.set(editor.session.getValue());
-	  }
+		if (codeStore) {
+			codeStore.set(editor.session.getValue());
+		}
 	};
 
 	let beautify = () => {
-	  beautifier.beautify(editor.session);
+		beautifier.beautify(editor.session);
 	};
 
 	let toggleKeybinds = () => {
-	  if (vimMode && editor) {
-	    editor.setKeyboardHandler(vscode.handler);
-	  } else {
-	    editor.setKeyboardHandler(vim.handler);
-	  }
-	  vimMode = !vimMode;
+		if (vimMode && editor) {
+			editor.setKeyboardHandler(vscode.handler);
+		} else {
+			editor.setKeyboardHandler(vim.handler);
+		}
+		vimMode = !vimMode;
 	};
 
 	onMount(() => {
-	  editorDiv.id = Math.random().toString(16);
-	  editor = ace.edit(editorDiv.id);
-	  editor.setTheme(solarized_dark);
-	  if (vimMode) {
-	    editor.setKeyboardHandler(vim.handler);
-	  } else {
-	    editor.setKeyboardHandler(vscode.handler);
-	  }
-	  if (mode) {
-	    editor.session.setMode(new mode.Mode());
-	  }
-	  editor.setReadOnly(readOnly);
-	  editor.session.setTabSize(2);
-	  editor.session.setUseSoftTabs(true);
-	  editor.setShowPrintMargin(false);
-	  lightMode.subscribe((value) => {
-	    if (value) {
-	      editor.setTheme(solarized_light);
-	    } else {
-	      editor.setTheme(solarized_dark);
-	    }
-	  });
+		editorDiv.id = Math.random().toString(16);
+		editor = ace.edit(editorDiv.id);
+		editor.setTheme(solarized_dark);
+		if (vimMode) {
+			editor.setKeyboardHandler(vim.handler);
+		} else {
+			editor.setKeyboardHandler(vscode.handler);
+		}
+		if (mode) {
+			editor.session.setMode(new mode.Mode());
+		}
+		editor.setReadOnly(readOnly);
+		editor.session.setTabSize(2);
+		editor.session.setUseSoftTabs(true);
+		editor.setShowPrintMargin(false);
+		lightMode.subscribe((value) => {
+			if (value) {
+				editor.setTheme(solarized_light);
+			} else {
+				editor.setTheme(solarized_dark);
+			}
+		});
 
-	  editorElement.onfullscreenchange = () => {
-	    if (document.fullscreenElement) {
-	      fullscreen = true;
-	    } else {
-	      fullscreen = false;
-	    }
-	  };
+		editorElement.onfullscreenchange = () => {
+			if (document.fullscreenElement) {
+				fullscreen = true;
+			} else {
+				fullscreen = false;
+			}
+		};
 
-	  document.querySelectorAll('textarea.ace_text-input').forEach((value) => {
-	    value.setAttribute('aria-label', 'Editor');
-	  });
+		document.querySelectorAll('textarea.ace_text-input').forEach((value) => {
+			value.setAttribute('aria-label', 'Editor');
+		});
 	});
 </script>
 

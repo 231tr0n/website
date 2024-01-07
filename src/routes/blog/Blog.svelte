@@ -4,15 +4,15 @@
 	let blogPosts = [];
 
 	let blogPostCreator = (name, badges, description, url) => {
-	  return {
-	    name,
-	    badges,
-	    description,
-	    url
-	  };
+		return {
+			name,
+			badges,
+			description,
+			url
+		};
 	};
 	blogPosts.push(
-	  blogPostCreator('Me', ['introduction', 'about', 'me'], 'Introduction of who I am.', '/')
+		blogPostCreator('Me', ['introduction', 'about', 'me'], 'Introduction of who I am.', '/')
 	);
 </script>
 

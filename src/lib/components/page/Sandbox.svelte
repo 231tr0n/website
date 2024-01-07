@@ -11,38 +11,38 @@
 	let subscriber = () => {};
 
 	let toggleFullscreen = () => {
-	  if (document.fullscreenElement) {
-	    document.exitFullscreen();
-	  } else {
-	    iframeElement.requestFullscreen();
-	  }
+		if (document.fullscreenElement) {
+			document.exitFullscreen();
+		} else {
+			iframeElement.requestFullscreen();
+		}
 	};
 
 	let resized = (element) => {
-	  element.style.height = '100%';
+		element.style.height = '100%';
 	};
 
 	onMount(() => {
-	  if (title) {
-	    iframeElement.onfullscreenchange = () => {
-	      if (document.fullscreenElement) {
-	        fullscreen = true;
-	      } else {
-	        fullscreen = false;
-	      }
-	    };
-	  }
+		if (title) {
+			iframeElement.onfullscreenchange = () => {
+				if (document.fullscreenElement) {
+					fullscreen = true;
+				} else {
+					fullscreen = false;
+				}
+			};
+		}
 
-	  if (srcdocStore) {
-	    subscriber = srcdocStore.subscribe((value) => {
-	      iframe.srcdoc = value;
-	      iframe.src = iframe.src;
-	    });
-	  }
+		if (srcdocStore) {
+			subscriber = srcdocStore.subscribe((value) => {
+				iframe.srcdoc = value;
+				iframe.src = iframe.src;
+			});
+		}
 	});
 
 	onDestroy(() => {
-	  subscriber();
+		subscriber();
 	});
 </script>
 

@@ -19,53 +19,53 @@
 	let lineNumber = '';
 
 	let toggleFullscreen = () => {
-	  if (document.fullscreenElement) {
-	    document.exitFullscreen();
-	  } else {
-	    codeElement.requestFullscreen();
-	  }
+		if (document.fullscreenElement) {
+			document.exitFullscreen();
+		} else {
+			codeElement.requestFullscreen();
+		}
 	};
 
 	let copy = () => {
-	  navigator.clipboard.writeText(code);
-	  copied = true;
-	  setTimeout(() => {
-	    copied = false;
-	  }, 2000);
+		navigator.clipboard.writeText(code);
+		copied = true;
+		setTimeout(() => {
+			copied = false;
+		}, 2000);
 	};
 
 	onMount(() => {
-	  codeElement.onfullscreenchange = () => {
-	    if (document.fullscreenElement) {
-	      fullscreen = true;
-	    } else {
-	      fullscreen = false;
-	    }
-	  };
+		codeElement.onfullscreenchange = () => {
+			if (document.fullscreenElement) {
+				fullscreen = true;
+			} else {
+				fullscreen = false;
+			}
+		};
 
-	  if (code && langName && langDef) {
-	    highlightjs.registerLanguage(langName, langDef);
-	    codeHTML = highlightjs.highlight(code, {
-	      language: langName
-	    }).value;
-	  }
+		if (code && langName && langDef) {
+			highlightjs.registerLanguage(langName, langDef);
+			codeHTML = highlightjs.highlight(code, {
+				language: langName
+			}).value;
+		}
 
-	  let n = code.trim().split('\n').length;
+		let n = code.trim().split('\n').length;
 
-	  for (let i = 0; i < n; i++) {
-	    lineNumber.innerText += (i + 1).toString() + '\n';
-	  }
+		for (let i = 0; i < n; i++) {
+			lineNumber.innerText += (i + 1).toString() + '\n';
+		}
 
-	  if (fileName) {
-	    const blob = new Blob([code], { type: 'text/plain' });
-	    fileUrl = URL.createObjectURL(blob);
-	    anchor.href = fileUrl;
-	    anchor.download = fileName;
-	  }
+		if (fileName) {
+			const blob = new Blob([code], { type: 'text/plain' });
+			fileUrl = URL.createObjectURL(blob);
+			anchor.href = fileUrl;
+			anchor.download = fileName;
+		}
 	});
 
 	onDestroy(() => {
-	  URL.revokeObjectURL(fileUrl);
+		URL.revokeObjectURL(fileUrl);
 	});
 </script>
 

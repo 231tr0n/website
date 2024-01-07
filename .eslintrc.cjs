@@ -13,7 +13,6 @@ module.exports = {
 		node: true
 	},
 	rules: {
-		'svelte/no-at-html-tags': ['warn'],
-		indent: ['error', 2]
+		'svelte/no-at-html-tags': ['warn']
 	}
 };
