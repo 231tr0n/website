@@ -1,20 +1,18 @@
+/** @type { import("eslint").Linter.Config } */
 module.exports = {
   root: true,
-  extends: ['eslint:recommended', 'plugin:svelte/recommended'],
+  extends: ["eslint:recommended", "plugin:svelte/recommended"],
   parserOptions: {
-    sourceType: 'module',
+    sourceType: "module",
     ecmaVersion: 2020,
-    extraFileExtensions: ['.svelte']
+    extraFileExtensions: [".svelte"],
   },
   env: {
     browser: true,
     es2017: true,
-    node: true
+    node: true,
   },
   rules: {
-    "svelte/no-at-html-tags": [
-      "warn"
-    ]
-  }
+    "svelte/no-at-html-tags": ["warn"],
+  },
 };
-
