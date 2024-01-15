@@ -29,6 +29,7 @@
   <link rel="preload" as="image" type="image/avif" href="/images/cinnamon.avif" />
   <link rel="preload" as="image" type="image/avif" href="/images/bspwm.avif" />
   <link rel="preload" as="image" type="image/avif" href="/images/fish.avif" />
+  <link rel="preload" as="image" type="image/avif" href="/images/lua.svg" />
 </svelte:head>
 
 <h1>Home</h1>
@@ -132,6 +133,9 @@
   </a>
   <a target="_blank" href="https://vimdoc.sourceforge.net/htmldoc">
     <img class="logo" alt="Vim" src="/images/vim.avif" />
+  </a>
+  <a target="_blank" href="https://www.lua.org">
+    <img class="logo" alt="Lua" src="/images/lua.svg" />
   </a>
   <a target="_blank" href="https://www.microsoft.com/en-us/windows">
     <img class="logo" alt="Windows" src="/images/windows.avif" />
