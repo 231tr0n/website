@@ -69,7 +69,7 @@
 <h2>CVEs</h2>
 <ol>
   <li>
-    <a target="_blank" href="https://huntr.dev/bounties/001d1c29-805a-4035-93bb-71a0e81da3e5">
+    <a target="_blank" href="https://huntr.com/bounties/001d1c29-805a-4035-93bb-71a0e81da3e5">
       CVE-2022-0764
     </a>
   </li>
