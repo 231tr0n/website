@@ -39,7 +39,7 @@
   <img src="/images/zeltron.avif" alt="Logo" class="zeltron" />
 </div>
 
-<h2>About</h2>
+<h2>Stuff about me</h2>
 <ul>
   <li>
     Hello, my name is <span class="highlightkeyword">Srikar</span>
@@ -54,7 +54,7 @@
   </li>
 </ul>
 
-<h2>Hobbies</h2>
+<h2>Stuff I usually do</h2>
 <div class="center">
   <div class="badge">Badminton</div>
   <div class="badge">Programming</div>
@@ -66,7 +66,7 @@
   <div class="badge">Solving rubik's cubes</div>
 </div>
 
-<h2>CVEs</h2>
+<h2>Hacking stuff on my name</h2>
 <ol>
   <li>
     <a target="_blank" href="https://huntr.com/bounties/001d1c29-805a-4035-93bb-71a0e81da3e5">
@@ -75,7 +75,7 @@
   </li>
 </ol>
 
-<h2>Publications</h2>
+<h2>Stuff on my name</h2>
 <ol>
   <li>
     <a target="_blank" href="https://link.springer.com/chapter/10.1007/978-981-19-6088-8_32">
@@ -84,7 +84,7 @@
   </li>
 </ol>
 
-<h2>Skills</h2>
+<h2>Stuff I touched in my life</h2>
 <div class="center">
   <a target="_blank" href="https://go.dev">
     <img class="logo" alt="Golang" src="/images/go.avif" />
@@ -151,7 +151,7 @@
   </a>
 </div>
 
-<h2>Development Environment</h2>
+<h2>Stuff in which I do stuff</h2>
 <h3>Operating systems</h3>
 <div class="center">
   <a target="_blank" href="https://archlinux.org">
