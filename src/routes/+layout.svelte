@@ -5,46 +5,12 @@
 </script>
 
 <svelte:head>
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/roboto-mono.woff2" crossorigin />
   <link
     rel="preload"
     as="font"
     type="font/woff2"
-    href="/fonts/HurmitNerdFontMono-Bold.woff2"
-    crossorigin
-  />
-  <!-- <link -->
-  <!--   rel="preload" -->
-  <!--   as="font" -->
-  <!--   type="font/woff2" -->
-  <!--   href="/fonts/HurmitNerdFontMono-BoldItalic.woff2" -->
-  <!--   crossorigin -->
-  <!-- /> -->
-  <!-- <link -->
-  <!--   rel="preload" -->
-  <!--   as="font" -->
-  <!--   type="font/woff2" -->
-  <!--   href="/fonts/HurmitNerdFontMono-Italic.woff2" -->
-  <!--   crossorigin -->
-  <!-- /> -->
-  <!-- <link -->
-  <!--   rel="preload" -->
-  <!--   as="font" -->
-  <!--   type="font/woff2" -->
-  <!--   href="/fonts/HurmitNerdFontMono-LightItalic.woff2" -->
-  <!--   crossorigin -->
-  <!-- /> -->
-  <!-- <link -->
-  <!--   rel="preload" -->
-  <!--   as="font" -->
-  <!--   type="font/woff2" -->
-  <!--   href="/fonts/HurmitNerdFontMono-Light.woff2" -->
-  <!--   crossorigin -->
-  <!-- /> -->
-  <link
-    rel="preload"
-    as="font"
-    type="font/woff2"
-    href="/fonts/HurmitNerdFontMono-Regular.woff2"
+    href="/fonts/roboto-condensed.woff2"
     crossorigin
   />
   <link rel="preload" as="image" type="image/avif" href="/images/background.avif" />

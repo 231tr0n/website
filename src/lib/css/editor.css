@@ -13,7 +13,7 @@ body.light-mode .ace_gutter-layer {
 }
 
 div.ace_editor {
-  font-family: HurmitNerdFontMono-Regular;
+  font-family: Roboto-Mono;
   font-size: 15px;
   width: 100%;
   height: calc(100% - 34px - 38px);

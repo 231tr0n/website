@@ -72,38 +72,14 @@ body.light-mode ::-webkit-scrollbar-thumb:hover {
 }
 
 @font-face {
-  font-family: HurmitNerdFontMono-Bold;
-  src: url('/fonts/HurmitNerdFontMono-Bold.woff2') format('woff2');
+  font-family: Roboto-Condensed;
+  src: url('/fonts/roboto-condensed.woff2') format('woff2');
   font-display: swap;
 }
 
-/* @font-face { */
-/*   font-family: HurmitNerdFontMono-BoldItalic; */
-/*   src: url("/fonts/HurmitNerdFontMono-BoldItalic.woff2") format("opentype"); */
-/*   font-display: swap; */
-/* } */
-
-/* @font-face { */
-/*   font-family: HurmitNerdFontMono-Italic; */
-/*   src: url("/fonts/HurmitNerdFontMono-Italic.woff2") format("opentype"); */
-/*   font-display: swap; */
-/* } */
-
-/* @font-face { */
-/*   font-family: HurmitNerdFontMono-LightItalic; */
-/*   src: url("/fonts/HurmitNerdFontMono-LightItalic.woff2") format("opentype"); */
-/*   font-display: swap; */
-/* } */
-
-/* @font-face { */
-/*   font-family: HurmitNerdFontMono-Light; */
-/*   src: url("/fonts/HurmitNerdFontMono-Light.woff2") format("opentype"); */
-/*   font-display: swap; */
-/* } */
-
 @font-face {
-  font-family: HurmitNerdFontMono-Regular;
-  src: url('/fonts/HurmitNerdFontMono-Regular.woff2') format('woff2');
+  font-family: Roboto-Mono;
+  src: url('/fonts/roboto-mono.woff2') format('woff2');
   font-display: swap;
 }
 
@@ -133,7 +109,7 @@ body.light-mode a img:hover {
 }
 
 body {
-  font-family: HurmitNerdFontMono-Regular;
+  font-family: Roboto-Condensed;
   background-color: var(--color-dark-background);
   color: var(--color-dark-foreground);
   margin: 0px;
@@ -146,7 +122,7 @@ body.light-mode {
 }
 
 button {
-  font-family: HurmitNerdFontMono-Regular;
+  font-family: Roboto-Condensed;
   background-color: var(--color-dark-button-background);
   color: var(--color-dark-button-foreground);
   border: 2px solid transparent;
@@ -173,17 +149,17 @@ img {
 }
 
 select {
-  font-family: HurmitNerdFontMono-Regular;
+  font-family: Roboto-Condensed;
   outline: none;
 }
 
 option {
-  font-family: HurmitNerdFontMono-Regular;
+  font-family: Roboto-Condensed;
   outline: none;
 }
 
 input {
-  font-family: HurmitNerdFontMono-Regular;
+  font-family: Roboto-Condensed;
   outline: none;
 }
 

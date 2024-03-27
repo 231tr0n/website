@@ -252,6 +252,7 @@
     text-align: right;
     padding-left: 10px;
     padding-right: 10px;
+    font-family: Roboto-Mono;
   }
 
   :global(body.light-mode) .line-number {
