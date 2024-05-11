@@ -75,7 +75,7 @@
   }
 
   a > button {
-    padding: 1px;
+    padding: 2px;
     font-size: 14px;
   }
 
