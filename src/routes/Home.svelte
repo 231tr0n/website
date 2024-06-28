@@ -122,6 +122,9 @@
   <a target="_blank" href="https://kit.svelte.dev">
     <img class="logo" alt="Sveltekit" src="/images/sveltekit.avif" />
   </a>
+  <a target="_blank" href="https://angular.dev">
+    <img class="logo" alt="Angular" src="/images/angular.svg" />
+  </a>
   <a target="_blank" href="https://openjdk.org">
     <img class="logo" alt="Java" src="/images/java.avif" />
   </a>
